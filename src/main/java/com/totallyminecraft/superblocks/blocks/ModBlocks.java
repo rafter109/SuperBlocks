@@ -13,6 +13,7 @@ public final class ModBlocks {
     public static Block coloredemeraldBlock;
     public static Block rawplasticBlock;
     public static Block coloredglowstoneBlock;
+    public static Block constructionblock;
 
 
     public static void init(){
@@ -26,6 +27,7 @@ public final class ModBlocks {
         coloredemeraldBlock = new ColoredEmeraldBlock();
         rawplasticBlock = new RawPlasticBlock();
         coloredglowstoneBlock = new ColoredGlowstoneBlock();
+        constructionblock = new ConstructionBlock();
 
     }
 }
