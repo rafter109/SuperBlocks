@@ -20,6 +20,9 @@ public class TestBlock extends Block{
         this.setBlockName(Constants.MODID + "_" + name);
         GameRegistry.registerBlock(this, name);
         setBlockTextureName(Constants.MODID + ":" + name);
+        setResistance(30f);
+        setHardness(1.5f);
+        setHarvestLevel("pickaxe",1);
     }
 
 }

@@ -15,9 +15,7 @@ import net.minecraft.util.IIcon;
 
 import java.util.List;
 
-/**
- * Created by Jake on 1/2/2015.
- */
+
 public class RawPlasticBlock extends Block{
 
     private final String name = "rawplasticBlock";
@@ -30,6 +28,9 @@ public class RawPlasticBlock extends Block{
         setBlockName(Constants.MODID + "_" + name);
         setCreativeTab(SuperBlocks.tabSuperBlocks);
         GameRegistry.registerBlock(this, ItemBlockMultiBlock.class, name);
+        setResistance(30f);
+        setHardness(1.5f);
+        setHarvestLevel("pickaxe",1);
         icons = new IIcon[maxMeta];
     }
 

@@ -28,6 +28,9 @@ public class ColoredBrickBlock extends Block{
         setBlockName(Constants.MODID + "_" + name);
         setCreativeTab(SuperBlocks.tabSuperBlocks);
         GameRegistry.registerBlock(this, ItemBlockMultiBlock.class, name);
+        setResistance(30f);
+        setHardness(1.5f);
+        setHarvestLevel("pickaxe",1);
         icons = new IIcon[maxMeta];
     }
 
