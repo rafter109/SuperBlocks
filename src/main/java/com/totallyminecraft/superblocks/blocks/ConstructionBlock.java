@@ -58,8 +58,17 @@ public class ConstructionBlock extends Block{
 
         switch(meta){
 
-            case 0:
-                return icons[0];
+            case 0: {
+
+                switch(side){
+                    case 0:
+                        return icons[0];
+                    case 1:
+                        return icons[1];
+                    default:
+                        return icons[0];
+                }
+            }
             case 1:
                 return icons[1];
             case 2:
