@@ -20,6 +20,10 @@ import net.minecraft.item.Item;
  * Created by Jake on 1/1/2015.
  */
 
+/**
+ * Narfled by rafter109
+ */
+
 @Mod(modid = Constants.MODID, name = Constants.MODNAME, version = Constants.VERSION)
 
 public class SuperBlocks {
