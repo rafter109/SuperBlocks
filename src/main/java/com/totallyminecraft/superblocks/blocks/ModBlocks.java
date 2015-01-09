@@ -2,9 +2,6 @@ package com.totallyminecraft.superblocks.blocks;
 
 import net.minecraft.block.Block;
 
-/**
- * Created by Jake on 1/1/2015.
- */
 public final class ModBlocks {
 
     public static Block testBlock;
