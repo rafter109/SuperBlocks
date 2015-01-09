@@ -62,7 +62,7 @@ public class ConstructionBlock extends Block{
 
                 switch(side){
                     case 0:
-                        return icons[0];
+                        return icons[1];
                     case 1:
                         return icons[1];
                     default:
