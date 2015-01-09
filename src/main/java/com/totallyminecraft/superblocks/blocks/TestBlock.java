@@ -7,9 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-/**
- * Created by Jake on 1/1/2015.
- */
+
 public class TestBlock extends Block{
 
     private String name = "testBlock";
