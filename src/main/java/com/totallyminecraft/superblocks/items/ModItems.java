@@ -1,6 +1,7 @@
 package com.totallyminecraft.superblocks.items;
 
 
+
 import net.minecraft.item.Item;
 
 /**
@@ -16,6 +17,3 @@ public final class ModItems {
 
     }
 }
-/**
- *  colbie is a fuckhead
- */

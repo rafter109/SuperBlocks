@@ -6,6 +6,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockObsidian;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -30,6 +31,9 @@ public class ColoredObsidianBlock extends Block{
         setBlockName(Constants.MODID + "_" + name);
         setCreativeTab(SuperBlocks.tabSuperBlocks);
         GameRegistry.registerBlock(this, ItemBlockMultiBlock.class, name);
+        setResistance(6000f);
+        setHardness(50.0f);
+        setHarvestLevel("pickaxe",3);
         icons = new IIcon[maxMeta];
     }
 

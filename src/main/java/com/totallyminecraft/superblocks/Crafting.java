@@ -31,7 +31,31 @@ public class Crafting {
             GameRegistry.addSmelting(new ItemStack(ModBlocks.rawplasticBlock, 1, i), new ItemStack(ModBlocks.plasticBlock, 1, i), 0F);
         }
 
+        for (int i = 0; i < 16; i++) {
 
+            GameRegistry.addSmelting(new ItemStack(ModBlocks.plasticBlock, 1, i), new ItemStack(ModBlocks.edgedplasticBlock, 1, i), 0F);
+        }
+
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredobsidianBlock, 8, 0), new Object[]{"###", "#*#", "###", '#', Blocks.obsidian, '*', new ItemStack(Items.water_bucket)});
+
+        for (int i = 1; i < 16; i++) {
+
+            j = 15-i;
+
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredobsidianBlock, 8, i), new Object[]{"###", "#*#", "###", '#', new ItemStack(ModBlocks.coloredobsidianBlock, 1, 0), '*', new ItemStack(Items.dye, 1, j)});
+        }
+
+
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredemeraldBlock, 8, 0), new Object[]{"###", "#*#", "###", '#', Blocks.emerald_block, '*', new ItemStack(Items.water_bucket)});
+
+
+        for (int i = 1; i < 16; i++) {
+
+            j = 15-i;
+
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredemeraldBlock, 8, i), new Object[]{"###", "#*#", "###", '#', new ItemStack(ModBlocks.coloredemeraldBlock, 1, 0), '*', new ItemStack(Items.dye, 1, j)});
+            GameRegistry.addShapelessRecipe(new ItemStack(Items.emerald, 9), new Object[]{new ItemStack(ModBlocks.coloredemeraldBlock,1,i)});
+        }
 
     }
 }
