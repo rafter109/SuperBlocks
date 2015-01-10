@@ -15,6 +15,9 @@ public final class ModBlocks {
     public static Block coloredglowstoneBlock;
     public static Block constructionBlocks;
 
+    public static Block woodCutterIdle;
+    public static Block woodCutterActive;
+
 
 
     public static void init(){
@@ -29,7 +32,7 @@ public final class ModBlocks {
         rawplasticBlock = new RawPlasticBlock();
         coloredglowstoneBlock = new ColoredGlowstoneBlock();
         constructionBlocks = new ConstructionBlock();
-
+        woodCutterActive = new WoodCutterBlock();
 
     }
 }
