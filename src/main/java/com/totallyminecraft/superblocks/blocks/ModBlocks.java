@@ -14,7 +14,8 @@ public final class ModBlocks {
     public static Block rawplasticBlock;
     public static Block coloredglowstoneBlock;
     public static Block constructionBlocks;
-    public static Block woodCutter;
+    public static Block woodWorker;
+    public static Block brickFurnace;
 
 
 
@@ -30,7 +31,8 @@ public final class ModBlocks {
         rawplasticBlock = new RawPlasticBlock();
         coloredglowstoneBlock = new ColoredGlowstoneBlock();
         constructionBlocks = new ConstructionBlock();
-        woodCutter = new WoodCutterBlock();
+        woodWorker = new WoodWorkerBlock();
+        brickFurnace = new BrickFurnaceBlock();
 
     }
 }

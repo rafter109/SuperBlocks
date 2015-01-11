@@ -1,19 +1,11 @@
 package com.totallyminecraft.superblocks.items;
-
-
-
 import net.minecraft.item.Item;
 
-/**
- * Created by Jake on 1/1/2015.
- */
 public final class ModItems {
 
-
+    public static Item Quiver;
 
     public static void init(){
-
-
-
+        Quiver= new QuiverItem();
     }
 }

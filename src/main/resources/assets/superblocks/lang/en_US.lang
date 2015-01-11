@@ -152,4 +152,4 @@ tile.superblocks_constructionBlock.13Meta.name=Temp8
 tile.superblocks_constructionBlock.14Meta.name=Temp9
 tile.superblocks_constructionBlock.15Meta.name=Temp10
 
-tile.superBlocks_woodCutter.0Meta.name=Wood Worker
+tile.superBlocks_woodWorker.0Meta.name=Wood Worker
