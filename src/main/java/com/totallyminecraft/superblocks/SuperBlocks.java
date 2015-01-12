@@ -51,7 +51,7 @@ public class SuperBlocks {
         ModBlocks.init();
         ModTileEntities.init();
         Crafting.init();
-        GameRegistry.registerWorldGenerator(new WorldGeneratorSuperBlocks(), 1);
+        //GameRegistry.registerWorldGenerator(new WorldGeneratorSuperBlocks(), 1);
         NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 
 
