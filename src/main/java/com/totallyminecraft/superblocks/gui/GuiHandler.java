@@ -9,6 +9,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class GuiHandler implements IGuiHandler{
+
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z){
         WoodWorkerEntity entity = (WoodWorkerEntity) world.getTileEntity(x,y,z);
         if(entity != null){

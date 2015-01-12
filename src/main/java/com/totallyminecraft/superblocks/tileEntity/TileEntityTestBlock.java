@@ -1,9 +1,9 @@
 package com.totallyminecraft.superblocks.tileEntity;
-
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.WorldServer;
 import net.minecraft.world.storage.WorldInfo;
+import com.totallyminecraft.superblocks.blocks.TestBlock;
 
 
 public class TileEntityTestBlock extends TileEntity{
@@ -21,18 +21,20 @@ public class TileEntityTestBlock extends TileEntity{
     WorldInfo worldinfo = worldserver.getWorldInfo();
 
     @Override
-    public void updateEntity(){
+    public void updateEntity() {
 
-        if(!worldObj.isRemote){
-
-            tick++;
-            if(tick == 100){
-                this.worldObj.setWorldTime(5000);
-                worldinfo.setRaining(false);
-                tick = 0;
+        if (!worldObj.isRemote) {
+            if (TestBlock.TestBlockActive) {
+                tick++;
+                if (tick == 100) {
+                    this.worldObj.setWorldTime(5000);
+                    worldinfo.setRaining(false);
+                    tick = 0;
+                }
             }
+
         }
 
     }
-
 }
+

@@ -7,14 +7,17 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+import org.lwjgl.input.Keyboard;
 
 
 public class TestBlock extends Block implements ITileEntityProvider{
 
     private String name = "testBlock";
+
+    public static boolean TestBlockActive = false;
 
     public TestBlock(){
         super(Material.rock);
@@ -35,6 +38,18 @@ public class TestBlock extends Block implements ITileEntityProvider{
     @Override
     public boolean hasTileEntity(int metadata){
         return true;
+    }
+
+    @Override
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer entityPlayer, int par1, float par2, float par3, float par4){
+
+        if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)){
+            if(!world.isRemote){
+                TestBlockActive = !TestBlockActive;
+            }
+            return false;
+        }
+        return false;
     }
 
 }

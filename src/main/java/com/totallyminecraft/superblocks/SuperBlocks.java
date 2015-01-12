@@ -52,13 +52,14 @@ public class SuperBlocks {
         ModTileEntities.init();
         Crafting.init();
         //GameRegistry.registerWorldGenerator(new WorldGeneratorSuperBlocks(), 1);
-        NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
-
-
+        //looking for guihandler look below
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
+
+        //moved to proper place
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 
     }
 

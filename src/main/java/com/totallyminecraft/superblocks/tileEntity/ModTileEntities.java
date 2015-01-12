@@ -7,5 +7,6 @@ public class ModTileEntities {
 
     public static void init(){
         GameRegistry.registerTileEntity(WoodWorkerEntity.class,"WoodWorker");
+        GameRegistry.registerTileEntity(TileEntityTestBlock.class,"TestBlock");
     }
 }
