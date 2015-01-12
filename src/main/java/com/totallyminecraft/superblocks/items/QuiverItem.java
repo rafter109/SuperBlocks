@@ -15,6 +15,7 @@ public class QuiverItem extends Item{
         setUnlocalizedName(Constants.MODID + "_" + name);
         GameRegistry.registerItem(this, name);
         setCreativeTab(SuperBlocks.tabSuperBlocksItems);
+        setTextureName(Constants.MODID + ":" + name);
     }
 
 }

@@ -6,6 +6,7 @@ tile.bleachFluid.name=Bleach
 
 item.superblocks_petrochembucketItem.name=Petrochemical Bucket
 item.superblocks_bleachbucketItem.name=Bleach Bucket
+item.superblocks_quiverItem.name=Quiver
 
 tile.superblocks_testBlock.name=Test Block
 
