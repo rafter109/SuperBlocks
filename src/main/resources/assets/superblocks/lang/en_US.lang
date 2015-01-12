@@ -1,20 +1,11 @@
 itemGroup.superblocksTab=SuperBlocks
 itemGroup.superblocksitemsTab=SuperBlocks Items
 
-tile.petrochemicalFluid.name=Liquid Petrochemicals
-tile.bleachFluid.name=Bleach
-
 item.superblocks_petrochembucketItem.name=Petrochemical Bucket
 item.superblocks_bleachbucketItem.name=Bleach Bucket
 item.superblocks_quiverItem.name=Quiver
 
 tile.superblocks_testBlock.name=Test Block
-
-tile.superblocks_multiBlock.0Meta.name=First Meta
-tile.superblocks_multiBlock.1Meta.name=Second Meta
-tile.superblocks_multiBlock.2Meta.name=Third Meta
-tile.superblocks_multiBlock.3Meta.name=Forth Meta
-tile.superblocks_multiBlock.4Meta.name=Fifth Meta
 
 tile.superblocks_plasticBlock.0Meta.name=White Plastic Block
 tile.superblocks_plasticBlock.1Meta.name=Orange Plastic Block
@@ -67,22 +58,22 @@ tile.superblocks_coloredbrickBlock.13Meta.name=Green Bricks
 tile.superblocks_coloredbrickBlock.14Meta.name=Red Bricks
 tile.superblocks_coloredbrickBlock.15Meta.name=Black Bricks
 
-tile.superblocks_fancybrickBlock.0Meta.name=White Bricks
-tile.superblocks_fancybrickBlock.1Meta.name=Orange Bricks
-tile.superblocks_fancybrickBlock.2Meta.name=Magenta Bricks
-tile.superblocks_fancybrickBlock.3Meta.name=Light Blue Bricks
-tile.superblocks_fancybrickBlock.4Meta.name=Yellow Bricks
-tile.superblocks_fancybrickBlock.5Meta.name=Lime Bricks
-tile.superblocks_fancybrickBlock.6Meta.name=Pink Bricks
-tile.superblocks_fancybrickBlock.7Meta.name=Gray Bricks
-tile.superblocks_fancybrickBlock.8Meta.name=Light Gray Bricks
-tile.superblocks_fancybrickBlock.9Meta.name=Cyan Bricks
-tile.superblocks_fancybrickBlock.10Meta.name=Purple Bricks
-tile.superblocks_fancybrickBlock.11Meta.name=Blue Bricks
-tile.superblocks_fancybrickBlock.12Meta.name=Brown Bricks
-tile.superblocks_fancybrickBlock.13Meta.name=Green Bricks
-tile.superblocks_fancybrickBlock.14Meta.name=Red Bricks
-tile.superblocks_fancybrickBlock.15Meta.name=Black Bricks
+tile.superblocks_fancybrickBlock.0Meta.name=Fancy Bricks 1
+tile.superblocks_fancybrickBlock.1Meta.name=Fancy Bricks 2
+tile.superblocks_fancybrickBlock.2Meta.name=Fancy Bricks 3
+tile.superblocks_fancybrickBlock.3Meta.name=Fancy Bricks 4
+tile.superblocks_fancybrickBlock.4Meta.name=Fancy Bricks 5
+tile.superblocks_fancybrickBlock.5Meta.name=Fancy Bricks 6
+tile.superblocks_fancybrickBlock.6Meta.name=Fancy Bricks 7
+tile.superblocks_fancybrickBlock.7Meta.name=Fancy Bricks 8
+tile.superblocks_fancybrickBlock.8Meta.name=Fancy Bricks 9
+tile.superblocks_fancybrickBlock.9Meta.name=Fancy Bricks 10
+tile.superblocks_fancybrickBlock.10Meta.name=Fancy Bricks 11
+tile.superblocks_fancybrickBlock.11Meta.name=Fancy Bricks 12
+tile.superblocks_fancybrickBlock.12Meta.name=Fancy Bricks 13
+tile.superblocks_fancybrickBlock.13Meta.name=Fancy Bricks 14
+tile.superblocks_fancybrickBlock.14Meta.name=Fancy Bricks 15
+tile.superblocks_fancybrickBlock.15Meta.name=Fancy Bricks 16
 
 tile.superblocks_coloredobsidianBlock.0Meta.name=White Obsidian
 tile.superblocks_coloredobsidianBlock.1Meta.name=Orange Obsidian
