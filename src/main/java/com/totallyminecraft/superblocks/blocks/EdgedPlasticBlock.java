@@ -15,9 +15,6 @@ import net.minecraft.util.IIcon;
 
 import java.util.List;
 
-/**
- * Created by Jake on 1/2/2015.
- */
 public class EdgedPlasticBlock extends Block{
 
     private final String name = "edgedplasticBlock";
