@@ -9,6 +9,7 @@ public final class ModBlocks {
     public static Block plasticBlock;
     public static Block edgedplasticBlock;
     public static Block coloredBrickBlock;
+    public static Block fancyBrickBlock;
     public static Block coloredobsidianBlock;
     public static Block coloredemeraldBlock;
     public static Block rawplasticBlock;
@@ -26,6 +27,7 @@ public final class ModBlocks {
         plasticBlock = new PlasticBlock();
         edgedplasticBlock = new EdgedPlasticBlock();
         coloredBrickBlock = new ColoredBrickBlock();
+        fancyBrickBlock = new FancyBrickBlock();
         coloredobsidianBlock = new ColoredObsidianBlock();
         coloredemeraldBlock = new ColoredEmeraldBlock();
         rawplasticBlock = new RawPlasticBlock();

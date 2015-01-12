@@ -67,6 +67,23 @@ tile.superblocks_coloredbrickBlock.13Meta.name=Green Bricks
 tile.superblocks_coloredbrickBlock.14Meta.name=Red Bricks
 tile.superblocks_coloredbrickBlock.15Meta.name=Black Bricks
 
+tile.superblocks_fancybrickBlock.0Meta.name=White Bricks
+tile.superblocks_fancybrickBlock.1Meta.name=Orange Bricks
+tile.superblocks_fancybrickBlock.2Meta.name=Magenta Bricks
+tile.superblocks_fancybrickBlock.3Meta.name=Light Blue Bricks
+tile.superblocks_fancybrickBlock.4Meta.name=Yellow Bricks
+tile.superblocks_fancybrickBlock.5Meta.name=Lime Bricks
+tile.superblocks_fancybrickBlock.6Meta.name=Pink Bricks
+tile.superblocks_fancybrickBlock.7Meta.name=Gray Bricks
+tile.superblocks_fancybrickBlock.8Meta.name=Light Gray Bricks
+tile.superblocks_fancybrickBlock.9Meta.name=Cyan Bricks
+tile.superblocks_fancybrickBlock.10Meta.name=Purple Bricks
+tile.superblocks_fancybrickBlock.11Meta.name=Blue Bricks
+tile.superblocks_fancybrickBlock.12Meta.name=Brown Bricks
+tile.superblocks_fancybrickBlock.13Meta.name=Green Bricks
+tile.superblocks_fancybrickBlock.14Meta.name=Red Bricks
+tile.superblocks_fancybrickBlock.15Meta.name=Black Bricks
+
 tile.superblocks_coloredobsidianBlock.0Meta.name=White Obsidian
 tile.superblocks_coloredobsidianBlock.1Meta.name=Orange Obsidian
 tile.superblocks_coloredobsidianBlock.2Meta.name=Magenta Obsidian
