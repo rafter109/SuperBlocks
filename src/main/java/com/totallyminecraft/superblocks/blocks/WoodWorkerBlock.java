@@ -31,12 +31,12 @@ public class WoodWorkerBlock extends BlockContainer{
     }
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister){
-        this.blockIcon = iconRegister.registerIcon(Constants.MODID + ":" + "woodWorkerSide");
-        this.iconTop = iconRegister.registerIcon(Constants.MODID + ":" + "woodWorkerTop");
+        blockIcon = iconRegister.registerIcon(Constants.MODID + ":" + "woodWorkerSide");
+        iconTop = iconRegister.registerIcon(Constants.MODID + ":" + "woodWorkerTop");
     }
     @SideOnly(Side.CLIENT)
     public IIcon getIcon(int side, int metadata){
-        return side == metadata ? this.blockIcon : this.blockIcon;
+        return side == metadata ? blockIcon : blockIcon;
     }
     public void onBlockAdded(World world, int x, int y, int z){
         super.onBlockAdded(world, x, y, z);
