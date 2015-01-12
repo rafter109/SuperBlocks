@@ -38,7 +38,7 @@ public class SuperBlocks {
         @Override
         @SideOnly(Side.CLIENT)
         public Item getTabIconItem() {
-            return Items.baked_potato;
+            return ModItems.overbakedpotatoItem;
         }
     };
 

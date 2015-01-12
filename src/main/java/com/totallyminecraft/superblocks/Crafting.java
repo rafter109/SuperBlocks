@@ -33,7 +33,7 @@ public class Crafting {
 
         for (int i = 0; i < 16; i++) {
 
-            GameRegistry.addSmelting(new ItemStack(ModBlocks.plasticBlock, 1, i), new ItemStack(ModBlocks.edgedplasticBlock, 1, i), 0F);
+            GameRegistry.addSmelting(new ItemStack(ModBlocks.plasticBlock, 1, i), new ItemStack(ModBlocks.edgedplasticBlock, 1, i), 0.0F);
         }
 
             GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredobsidianBlock, 8, 0), new Object[]{"###", "#*#", "###", '#', Blocks.obsidian, '*', new ItemStack(Items.water_bucket)});
@@ -56,6 +56,9 @@ public class Crafting {
             GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredemeraldBlock, 8, i), new Object[]{"###", "#*#", "###", '#', new ItemStack(ModBlocks.coloredemeraldBlock, 1, 0), '*', new ItemStack(Items.dye, 1, j)});
             GameRegistry.addShapelessRecipe(new ItemStack(Items.emerald, 9), new Object[]{new ItemStack(ModBlocks.coloredemeraldBlock,1,i)});
         }
+
+        GameRegistry.addSmelting(Items.baked_potato, new ItemStack(ModItems.overbakedpotatoItem), 0.0F);
+
 
     }
 }
