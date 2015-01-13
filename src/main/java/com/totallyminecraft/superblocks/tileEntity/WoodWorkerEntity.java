@@ -1,11 +1,12 @@
 package com.totallyminecraft.superblocks.tileEntity;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 
-public class WoodWorkerEntity extends TileEntity implements ISidedInventory{
+public class WoodWorkerEntity extends TileEntity implements IInventory {
 
     private String localizedName;
     private ItemStack[] slots = new ItemStack[10];
@@ -31,40 +32,50 @@ public class WoodWorkerEntity extends TileEntity implements ISidedInventory{
         return false;
     }
     public int getSizeInventory() {
-        return 0;
+        return slots.length;
     }
     public ItemStack getStackInSlot(int i) {
         return slots[i];
     }
     public ItemStack decrStackSize(int i, int j) {
+        ItemStack stack = getStackInSlot(i);
         if(slots[i] != null){
-            ItemStack stack;
-            if(slots[i].stackSize <= j){
-                stack = slots[i];
-            }else{
-                stack = slots[i].splitStack(j);
-                if(slots[i].stackSize == 0){
-                    slots[i] = null;
+            if (stack.stackSize <= j)
+            {
+                setInventorySlotContents(i, null);
+            }
+            else
+            {
+                stack = stack.splitStack(j);
+                if (stack.stackSize == 0)
+                {
+                    setInventorySlotContents(i, null);
                 }
-                return stack;
             }
         }
         return null;
     }
     public ItemStack getStackInSlotOnClosing(int i) {
-        return null;
+        ItemStack itemStack = getStackInSlot(i);
+        if (itemStack != null){
+            setInventorySlotContents(i, null);
+        }
+        return itemStack;
     }
     public void setInventorySlotContents(int i, ItemStack itemStack) {
-
+        slots[i] = itemStack;
+        if(itemStack != null && itemStack.stackSize > getInventoryStackLimit()){
+            itemStack.stackSize = getInventoryStackLimit();
+        }
     }
     public String getInventoryName() {
-        return null;
+        return "WoodCutterInv";
     }
     public boolean hasCustomInventoryName() {
-        return false;
+        return true;
     }
     public int getInventoryStackLimit() {
-        return 0;
+        return 64;
     }
     public boolean isUseableByPlayer(EntityPlayer player) {
         return false;
@@ -76,6 +87,6 @@ public class WoodWorkerEntity extends TileEntity implements ISidedInventory{
 
     }
     public boolean isItemValidForSlot(int i, ItemStack itemStack) {
-        return false;
+        return true;
     }
 }

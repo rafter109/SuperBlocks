@@ -15,7 +15,10 @@ public class GuiHandler implements IGuiHandler{
         if(entity != null){
             switch(ID){
                 case ModTileEntities.WoodWorkerID:
-                    return new WoodWorkerContainer(player.inventory, entity);
+                    WoodWorkerEntity tileEntityTestContainer = (WoodWorkerEntity) world.getTileEntity(x, y, z);
+                    return new WoodWorkerInv(player.inventory, tileEntityTestContainer);
+                default:
+                    return null;
             }
         }
 
@@ -26,7 +29,10 @@ public class GuiHandler implements IGuiHandler{
         if(entity != null){
             switch(ID){
                 case ModTileEntities.WoodWorkerID:
-                    return new WoodWorkerGui(player.inventory, entity);
+                    WoodWorkerEntity tileEntityTestContainer = (WoodWorkerEntity) world.getTileEntity(x, y, z);
+                    return new WoodWorkerGui(player.inventory, tileEntityTestContainer);
+                default:
+                    return null;
             }
         }
 

@@ -29,25 +29,19 @@ public class WoodWorkerBlock extends BlockContainer{
         setHardness(1.5f);
         setHarvestLevel("pickaxe", 1);
     }
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister){
-        blockIcon = iconRegister.registerIcon(Constants.MODID + ":" + "woodWorkerSide");
-        iconTop = iconRegister.registerIcon(Constants.MODID + ":" + "woodWorkerTop");
-    }
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int side, int metadata){
-        return side == metadata ? blockIcon : blockIcon;
-    }
-    public void onBlockAdded(World world, int x, int y, int z){
-        super.onBlockAdded(world, x, y, z);
+    public boolean hasTileEntity(int meta) {
+        return true;
     }
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int Side, float hitX, float hitY, float hitZ){
-        if(!world.isRemote){
-            FMLNetworkHandler.openGui(player, SuperBlocks.instance, ModTileEntities.WoodWorkerID, world, x, y, z);
-        }
+        player.openGui(SuperBlocks.instance, ModTileEntities.WoodWorkerID, world, x ,y, z);
         return true;
     }
     public TileEntity createNewTileEntity(World world, int i){
         return new WoodWorkerEntity();
+    }
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister iconRegister){
+        blockIcon = iconRegister.registerIcon(Constants.MODID + ":" + "woodWorkerSide");
+        iconTop = iconRegister.registerIcon(Constants.MODID + ":" + "woodWorkerTop");
     }
 }
