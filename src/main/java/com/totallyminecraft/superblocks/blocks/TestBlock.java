@@ -10,6 +10,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.ContainerRepair;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.IChatComponent;
@@ -22,7 +25,8 @@ public class TestBlock extends Block implements ITileEntityProvider{
     private String name = "testBlock";
 
     public static boolean TestBlockActive = false;
-    ChatComponentText component = new ChatComponentText("Hi!");
+    ChatComponentText status1 = new ChatComponentText("Block Is Activated");
+    ChatComponentText status2 = new ChatComponentText("Block Is Deactivated");
 
     public TestBlock(){
         super(Material.rock);
@@ -34,6 +38,7 @@ public class TestBlock extends Block implements ITileEntityProvider{
         setHardness(1.5f);
         setHarvestLevel("pickaxe",1);
     }
+
 
     @Override
     public TileEntity createNewTileEntity(World world, int meta){
@@ -51,7 +56,10 @@ public class TestBlock extends Block implements ITileEntityProvider{
         if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
             if (!world.isRemote) {
                 TestBlockActive = !TestBlockActive;
-                entityPlayer.addChatComponentMessage(component);
+                if(TestBlockActive){
+                    entityPlayer.addChatComponentMessage(status1);
+                }
+                else entityPlayer.addChatComponentMessage(status2);
             }
             return false;
         }

@@ -20,5 +20,4 @@ public class OverBakedPotatoItem extends Item{
         setTextureName(Constants.MODID + ":" + name);
     }
 
-
 }
