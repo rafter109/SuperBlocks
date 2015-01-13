@@ -26,7 +26,7 @@ public class WoodWorkerGui extends GuiContainer{
     public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3){
         mc.getTextureManager().bindTexture(backgroundimage);
         par2 = (width - xSize) / 2;
-        int j = (height - ySize - 30) / 2;
+        int j = (height - ySize) / 2;
         drawTexturedModalRect(par2, j, 0, 0, xSize,  ySize);
     }
     public boolean doesGuiPauseGame()
