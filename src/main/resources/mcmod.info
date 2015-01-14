@@ -9,7 +9,7 @@
   "updateUrl": "",
   "authorList": ["pooboy_92, rafter109, oddlyk1, Bug723"],
   "credits": "The Forge and FML guys, for making forge",
-  "logoFile": "",
+  "logoFile": "/assets/superblocks/logo.png",
   "screenshots": [],
   "dependencies": []
 }
