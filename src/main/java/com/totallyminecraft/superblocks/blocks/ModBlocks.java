@@ -25,6 +25,7 @@ public final class ModBlocks {
     public static Block coloredbrick_stairs;
     public static Block coloredobsidian_stairs;
     public static Block coloredemerald_stairs;
+    public static Block fancybrick_stairs;
 
 
 
@@ -50,6 +51,7 @@ public final class ModBlocks {
             GameRegistry.registerBlock(coloredbrick_stairs = new ModBlockStairs("coloredbrick_stairs" + i , ModBlocks.coloredBrickBlock, i), "coloredbrick_stairs" + i);
             GameRegistry.registerBlock(coloredobsidian_stairs = new ModBlockStairs("coloredobsidian_stairs" + i , ModBlocks.coloredobsidianBlock, i), "coloredobsidian_stairs" + i);
             GameRegistry.registerBlock(coloredemerald_stairs = new ModBlockStairs("coloredemerald_stairs" + i , ModBlocks.coloredemeraldBlock, i), "coloredemerald_stairs" + i);
+            GameRegistry.registerBlock(fancybrick_stairs = new ModBlockStairs("fancybrick_stairs" + i , ModBlocks.fancyBrickBlock, i), "fancybrick_stairs" + i);
         }
     }
 }
