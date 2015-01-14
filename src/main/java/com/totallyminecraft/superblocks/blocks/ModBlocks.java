@@ -1,6 +1,8 @@
 package com.totallyminecraft.superblocks.blocks;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 
 public final class ModBlocks {
 
@@ -16,6 +18,13 @@ public final class ModBlocks {
     public static Block constructionBlocks;
     public static Block woodWorker;
     public static Block brickFurnace;
+
+    //stairs
+    public static Block plastic_stairs;
+    public static Block edgedplastic_stairs;
+    public static Block coloredbrick_stairs;
+    public static Block coloredobsidian_stairs;
+    public static Block coloredemerald_stairs;
 
 
 
@@ -34,5 +43,13 @@ public final class ModBlocks {
         woodWorker = new WoodWorkerBlock();
         brickFurnace = new BrickFurnaceBlock();
 
+        //stairs
+        for(int i=0; i < 16; i++) {
+            GameRegistry.registerBlock(plastic_stairs = new ModBlockStairs("plastic_stairs" + i , ModBlocks.plasticBlock, i), "plastic_stairs" + i);
+            GameRegistry.registerBlock(edgedplastic_stairs = new ModBlockStairs("edgedplastic_stairs" + i , ModBlocks.edgedplasticBlock, i), "edgedplastic_stairs" + i);
+            GameRegistry.registerBlock(coloredbrick_stairs = new ModBlockStairs("coloredbrick_stairs" + i , ModBlocks.coloredBrickBlock, i), "coloredbrick_stairs" + i);
+            GameRegistry.registerBlock(coloredobsidian_stairs = new ModBlockStairs("coloredobsidian_stairs" + i , ModBlocks.coloredobsidianBlock, i), "coloredobsidian_stairs" + i);
+            GameRegistry.registerBlock(coloredemerald_stairs = new ModBlockStairs("coloredemerald_stairs" + i , ModBlocks.coloredemeraldBlock, i), "coloredemerald_stairs" + i);
+        }
     }
 }
