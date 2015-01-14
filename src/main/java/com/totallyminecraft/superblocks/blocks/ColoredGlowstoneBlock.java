@@ -1,6 +1,6 @@
 package com.totallyminecraft.superblocks.blocks;
 
-import com.totallyminecraft.superblocks.SuperBlocks;
+import com.totallyminecraft.superblocks.ModTabs;
 import com.totallyminecraft.superblocks.lib.Constants;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -27,7 +27,7 @@ public class ColoredGlowstoneBlock extends Block{
         super(Material.glass);
         this.setLightLevel(1.0F);
         setBlockName(Constants.MODID + "_" + name);
-        setCreativeTab(SuperBlocks.tabSuperBlocks);
+        setCreativeTab(ModTabs.tabSuperBlocks);
         GameRegistry.registerBlock(this, ItemBlockMultiBlock.class, name);
         setResistance(1.5f);
         setHardness(.3f);

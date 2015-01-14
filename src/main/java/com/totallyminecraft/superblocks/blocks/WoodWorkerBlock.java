@@ -1,5 +1,6 @@
 package com.totallyminecraft.superblocks.blocks;
 
+import com.totallyminecraft.superblocks.ModTabs;
 import com.totallyminecraft.superblocks.SuperBlocks;
 import com.totallyminecraft.superblocks.lib.Constants;
 import com.totallyminecraft.superblocks.tileEntity.ModTileEntities;
@@ -22,7 +23,7 @@ public class WoodWorkerBlock extends BlockContainer{
         super(Material.rock);
         name="WoodWorker";
         setBlockName(Constants.MODID + "_" + name);
-        setCreativeTab(SuperBlocks.tabSuperBlocks);
+        setCreativeTab(ModTabs.tabSuperBlocks);
         GameRegistry.registerBlock(this, ItemBlockMultiBlock.class, name);
         setResistance(30f);
         setHardness(1.5f);

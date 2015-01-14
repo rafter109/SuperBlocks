@@ -1,12 +1,11 @@
 package com.totallyminecraft.superblocks.blocks;
 
-import com.totallyminecraft.superblocks.SuperBlocks;
+import com.totallyminecraft.superblocks.ModTabs;
 import com.totallyminecraft.superblocks.lib.Constants;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockObsidian;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -27,7 +26,7 @@ public class ColoredObsidianBlock extends Block{
     public ColoredObsidianBlock() {
         super(Material.rock);
         setBlockName(Constants.MODID + "_" + name);
-        setCreativeTab(SuperBlocks.tabSuperBlocks);
+        setCreativeTab(ModTabs.tabSuperBlocks);
         GameRegistry.registerBlock(this, ItemBlockMultiBlock.class, name);
         setResistance(6000f);
         setHardness(50.0f);

@@ -1,6 +1,6 @@
 package com.totallyminecraft.superblocks.blocks;
 
-import com.totallyminecraft.superblocks.SuperBlocks;
+import com.totallyminecraft.superblocks.ModTabs;
 import com.totallyminecraft.superblocks.lib.Constants;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -25,7 +25,7 @@ public class ColoredEmeraldBlock extends Block{
     public ColoredEmeraldBlock() {
         super(Material.rock);
         setBlockName(Constants.MODID + "_" + name);
-        setCreativeTab(SuperBlocks.tabSuperBlocks);
+        setCreativeTab(ModTabs.tabSuperBlocks);
         GameRegistry.registerBlock(this, ItemBlockMultiBlock.class, name);
         setResistance(30f);
         setHardness(1.5f);
