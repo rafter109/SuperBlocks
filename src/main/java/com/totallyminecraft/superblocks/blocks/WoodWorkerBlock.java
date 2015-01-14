@@ -4,7 +4,6 @@ import com.totallyminecraft.superblocks.SuperBlocks;
 import com.totallyminecraft.superblocks.lib.Constants;
 import com.totallyminecraft.superblocks.tileEntity.ModTileEntities;
 import com.totallyminecraft.superblocks.tileEntity.WoodWorkerEntity;
-import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -15,6 +14,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraft.util.IIcon;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.tileentity.TileEntity;
 
 public class WoodWorkerBlock extends BlockContainer{
     private String name;

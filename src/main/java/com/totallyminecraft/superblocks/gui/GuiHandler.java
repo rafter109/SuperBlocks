@@ -1,7 +1,6 @@
 package com.totallyminecraft.superblocks.gui;
 
 import com.totallyminecraft.superblocks.tileEntity.ModTileEntities;
-import com.totallyminecraft.superblocks.tileEntity.WoodWorkerContainer;
 import com.totallyminecraft.superblocks.tileEntity.WoodWorkerEntity;
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;

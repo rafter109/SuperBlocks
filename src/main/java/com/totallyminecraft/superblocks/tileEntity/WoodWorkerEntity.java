@@ -5,19 +5,18 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ChatComponentText;
 
 public class WoodWorkerEntity extends TileEntity implements IInventory {
 
     private String localizedName;
     private ItemStack[] slots = new ItemStack[10];
-
     public int getsizeInventory(){return slots.length;}
-
     public boolean isInvNameLocalized(){
         return localizedName != null && localizedName.length() > 0;
     }
     public String getInvName(){
-        return isInvNameLocalized() ? localizedName : "container.woodWorker";
+        return isInvNameLocalized() ? localizedName : "Wood Worker";
     }
     public void setGuiDisplayName(String displayName){
         localizedName = displayName;
