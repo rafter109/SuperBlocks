@@ -2,7 +2,7 @@ package com.totallyminecraft.superblocks.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
+
 
 public final class ModBlocks {
 
