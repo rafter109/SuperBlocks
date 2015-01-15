@@ -4,6 +4,7 @@ import com.totallyminecraft.superblocks.blocks.ModBlockStairs;
 import com.totallyminecraft.superblocks.blocks.ModBlocks;
 import com.totallyminecraft.superblocks.items.ModItems;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -38,6 +39,7 @@ public class Crafting {
 
             GameRegistry.addSmelting(new ItemStack(ModBlocks.plasticBlock, 1, i), new ItemStack(ModBlocks.edgedplasticBlock, 1, i), 0.0F);
 
+
         }
 
 
@@ -45,6 +47,8 @@ public class Crafting {
         GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredobsidianBlock, 8, 0), new Object[]{"###", "#*#", "###", '#', Blocks.obsidian, '*', new ItemStack(Items.water_bucket)});
         GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredemeraldBlock, 8, 0), new Object[]{"###", "#*#", "###", '#', Blocks.emerald_block, '*', new ItemStack(Items.water_bucket)});
         GameRegistry.addSmelting(Items.baked_potato, new ItemStack(ModItems.overbakedpotatoItem), 0.0F);
+
+
 
 
     }

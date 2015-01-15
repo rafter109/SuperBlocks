@@ -10,9 +10,7 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 
 import java.util.Random;
 
-/**
- * Created by Jake on 1/1/2015.
- */
+
 public class WorldGeneratorSuperBlocks implements IWorldGenerator{
 
     @Override
@@ -40,5 +38,7 @@ public class WorldGeneratorSuperBlocks implements IWorldGenerator{
     private void GenerateOverworld(Random random, int x, int z, World world) {
         this.addOreSpawn(ModBlocks.testBlock, world, random, x, z, 10, 15, 30, 0, 128);
     }
+
+
 
 }

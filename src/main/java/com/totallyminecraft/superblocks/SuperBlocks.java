@@ -5,11 +5,13 @@ import com.totallyminecraft.superblocks.gui.GuiHandler;
 import com.totallyminecraft.superblocks.items.ModItems;
 import com.totallyminecraft.superblocks.lib.Constants;
 import com.totallyminecraft.superblocks.tileEntity.ModTileEntities;
+import com.totallyminecraft.superblocks.world.WorldGeneratorSuperBlocks;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 
 @Mod(modid = Constants.MODID, name = Constants.MODNAME, version = Constants.VERSION)
