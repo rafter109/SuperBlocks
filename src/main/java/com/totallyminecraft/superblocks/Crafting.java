@@ -25,8 +25,8 @@ public class Crafting {
 
             j = 15-i;
 
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.rawplasticBlock, 16, j), new Object[]{"###", "#*#", "###", '#', ModBlocks.rawplasticBlock, '*', new ItemStack(Items.dye, 1, i)});
-            GameRegistry.addSmelting(new ItemStack(ModBlocks.rawplasticBlock, 1, i), new ItemStack(ModBlocks.plasticBlock, 1, i), 0F);
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredrawplasticBlock, 16, j), new Object[]{"###", "#*#", "###", '#', ModBlocks.rawplasticBlock, '*', new ItemStack(Items.dye, 1, i)});
+            GameRegistry.addSmelting(new ItemStack(ModBlocks.coloredrawplasticBlock, 1, i), new ItemStack(ModBlocks.plasticBlock, 1, i), 0F);
 
             GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredemeraldBlock, 8, i), new Object[]{"###", "#*#", "###", '#', new ItemStack(ModBlocks.coloredemeraldBlock, 1, 0), '*', new ItemStack(Items.dye, 1, j)});
             GameRegistry.addShapelessRecipe(new ItemStack(Items.emerald, 9), new Object[]{new ItemStack(ModBlocks.coloredemeraldBlock,1,i)});
@@ -44,8 +44,10 @@ public class Crafting {
 
 
         //single
-        GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredobsidianBlock, 8, 0), new Object[]{"###", "#*#", "###", '#', Blocks.obsidian, '*', new ItemStack(Items.water_bucket)});
-        GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredemeraldBlock, 8, 0), new Object[]{"###", "#*#", "###", '#', Blocks.emerald_block, '*', new ItemStack(Items.water_bucket)});
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredobsidianBlock, 8, 0), new Object[]{"###", "#*#", "###", '#', Blocks.obsidian, '*', new ItemStack(ModItems.bleachbucketItem)});
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredemeraldBlock, 8, 0), new Object[]{"###", "#*#", "###", '#', Blocks.emerald_block, '*', new ItemStack(ModItems.bleachbucketItem)});
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.bleachbucketItem), new Object[] {Items.water_bucket, new ItemStack(Items.dye, 1, 15)});
+
         GameRegistry.addSmelting(Items.baked_potato, new ItemStack(ModItems.overbakedpotatoItem), 0.0F);
 
 
