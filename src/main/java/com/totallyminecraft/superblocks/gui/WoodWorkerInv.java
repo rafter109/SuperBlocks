@@ -26,6 +26,11 @@ public class WoodWorkerInv extends Container {
         addSlotToContainer(new SlotCrafting(invPlayer.player, entity, invPlayer, id, 124, 35));
         id++;
     }
+    @Override
+    public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int slotIndex)
+    {
+        return null;
+    }
     private void bindPlayerInventory(InventoryPlayer inventoryPlayer)
     {
         int id = 0;
