@@ -14,6 +14,7 @@ public final class ModBlocks {
     public static Block coloredobsidianBlock;
     public static Block coloredemeraldBlock;
     public static Block rawplasticBlock;
+    public static Block coloredrawplasticBlock;
     public static Block coloredglowstoneBlock;
     public static Block constructionBlocks;
     public static Block woodWorker;
@@ -39,6 +40,7 @@ public final class ModBlocks {
         coloredobsidianBlock = new ColoredObsidianBlock();
         coloredemeraldBlock = new ColoredEmeraldBlock();
         rawplasticBlock = new RawPlasticBlock();
+        coloredrawplasticBlock = new ColoredRawPlasticBlock();
         coloredglowstoneBlock = new ColoredGlowstoneBlock();
         constructionBlocks = new ConstructionBlock();
         woodWorker = new WoodWorkerBlock();

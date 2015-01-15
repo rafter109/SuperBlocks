@@ -74,9 +74,6 @@ public class ItemBlockMultiBlock extends ItemBlock{
             case 15:
                 name = "15Meta";
                 break;
-            case 16:
-                name = "16Meta";
-                break;
             default:
                 name = "noMeta";
         }

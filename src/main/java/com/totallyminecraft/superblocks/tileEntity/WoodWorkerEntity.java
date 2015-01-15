@@ -1,5 +1,7 @@
 package com.totallyminecraft.superblocks.tileEntity;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
@@ -61,6 +63,7 @@ public class WoodWorkerEntity extends TileEntity implements IInventory {
         }
         return itemStack;
     }
+
     public void setInventorySlotContents(int i, ItemStack itemStack) {
         slots[i] = itemStack;
         if(itemStack != null && itemStack.stackSize > getInventoryStackLimit()){
