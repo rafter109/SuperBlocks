@@ -50,6 +50,7 @@ public class Crafting {
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.ironscrapItem, 18), new Object[] {Blocks.iron_block, new ItemStack(ModItems.cuttingtorchItem, 1)});
         GameRegistry.addRecipe(new ItemStack(ModBlocks.machinecoreBlock, 1), new Object[]{"###", "#*#", "###", '#', ModItems.ironscrapItem, '*', new ItemStack(ModItems.cuttingtorchItem)});
         GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_ingot, 1), new Object[] {ModItems.ironscrapItem, ModItems.ironscrapItem, new ItemStack(ModItems.cuttingtorchItem, 1)});
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.woodWorker), new Object[] {"###","PCP","#P#", '#', Blocks.planks, 'P', Blocks.piston,'C', ModBlocks.machinecoreBlock});
 
 
 
