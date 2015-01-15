@@ -4,9 +4,12 @@ itemGroup.superblocksitemsTab=SuperBlocks Items
 item.superblocks_bleachbucketItem.name=Bleach Bucket
 item.superblocks_quiverItem.name=Quiver
 item.superblocks_overbakedpotatoItem.name=Over Baked Potato
+item.superblocks_ironscrapItem.name=Iron Scrap
+item.superblocks_cuttingtorchItem.name=Cutting Torch
 
 tile.superblocks_testBlock.name=Test Block
 tile.superblocks_rawplasticBlock.name=Raw Plastic
+tile.superblocks_machinecoreBlock.name=Machine Core
 
 tile.superblocks_plasticBlock.0Meta.name=White Plastic Block
 tile.superblocks_plasticBlock.1Meta.name=Orange Plastic Block

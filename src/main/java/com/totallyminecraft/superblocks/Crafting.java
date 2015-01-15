@@ -46,7 +46,12 @@ public class Crafting {
         //single
         GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredobsidianBlock, 8, 0), new Object[]{"###", "#*#", "###", '#', Blocks.obsidian, '*', new ItemStack(ModItems.bleachbucketItem)});
         GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredemeraldBlock, 8, 0), new Object[]{"###", "#*#", "###", '#', Blocks.emerald_block, '*', new ItemStack(ModItems.bleachbucketItem)});
-        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.bleachbucketItem), new Object[] {Items.water_bucket, new ItemStack(Items.dye, 1, 15)});
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.bleachbucketItem), new Object[]{Items.water_bucket, new ItemStack(Items.dye, 1, 15)});
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.ironscrapItem, 18), new Object[] {Blocks.iron_block, new ItemStack(ModItems.cuttingtorchItem, 1)});
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.machinecoreBlock, 1), new Object[]{"###", "#*#", "###", '#', ModItems.ironscrapItem, '*', new ItemStack(ModItems.cuttingtorchItem)});
+        GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_ingot, 1), new Object[] {ModItems.ironscrapItem, ModItems.ironscrapItem, new ItemStack(ModItems.cuttingtorchItem, 1)});
+
+
 
         GameRegistry.addSmelting(Items.baked_potato, new ItemStack(ModItems.overbakedpotatoItem), 0.0F);
 

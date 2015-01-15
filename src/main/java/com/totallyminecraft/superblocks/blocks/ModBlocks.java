@@ -19,6 +19,7 @@ public final class ModBlocks {
     public static Block constructionBlocks;
     public static Block woodWorker;
     public static Block brickFurnace;
+    public static Block machinecoreBlock;
 
     //stairs
     public static Block plastic_stairs;
@@ -45,6 +46,7 @@ public final class ModBlocks {
         constructionBlocks = new ConstructionBlock();
         woodWorker = new WoodWorkerBlock();
         brickFurnace = new BrickFurnaceBlock();
+        machinecoreBlock = new MachineCoreBlock();
 
         //stairs
         for(int i=0; i < 16; i++) {
