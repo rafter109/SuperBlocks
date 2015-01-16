@@ -1,6 +1,13 @@
 itemGroup.superblocksTab=SuperBlocks
 itemGroup.superblocksitemsTab=SuperBlocks Items
 
+achievement.superblocks.burnbaby=Burn Baby Burn
+achievement.superblocks.burnbaby.desc=Craft A Cutting Torch
+achievement.superblocks.plankbyplank=Plank By Plank
+achievement.superblocks.plankbyplank.desc=Craft A Wood Worker
+achievement.superblocks.abittoasty=A Bit Toasty
+achievement.superblocks.abittoasty.desc=Make Some Edged Plastic
+
 item.superblocks_bleachbucketItem.name=Bleach Bucket
 item.superblocks_quiverItem.name=Quiver
 item.superblocks_overbakedpotatoItem.name=Over Baked Potato
