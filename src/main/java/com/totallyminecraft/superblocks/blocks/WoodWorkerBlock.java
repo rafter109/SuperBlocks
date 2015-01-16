@@ -16,33 +16,53 @@ import net.minecraft.world.World;
 import net.minecraft.util.IIcon;
 import net.minecraft.client.renderer.texture.IIconRegister;
 
-public class WoodWorkerBlock extends BlockContainer{
+public class WoodWorkerBlock extends BlockContainer {
     private String name;
-    private IIcon iconTop;
-    public WoodWorkerBlock(){
+    private IIcon[] icons = new IIcon[6];
+
+    public WoodWorkerBlock() {
         super(Material.rock);
-        name="WoodWorker";
+        name = "WoodWorker";
         setBlockName(Constants.MODID + "_" + name);
         setCreativeTab(ModTabs.tabSuperBlocks);
         GameRegistry.registerBlock(this, ItemBlockMultiBlock.class, name);
         setResistance(30f);
         setHardness(1.5f);
         setHarvestLevel("pickaxe", 1);
+
     }
+
     public boolean hasTileEntity(int meta) {
         return true;
     }
 
-    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int Side, float hitX, float hitY, float hitZ){
-        player.openGui(SuperBlocks.instance, ModTileEntities.WoodWorkerID, world, x ,y, z);
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int Side, float hitX, float hitY, float hitZ) {
+        player.openGui(SuperBlocks.instance, ModTileEntities.WoodWorkerID, world, x, y, z);
         return true;
     }
-    public TileEntity createNewTileEntity(World world, int i){
+
+    public TileEntity createNewTileEntity(World world, int i) {
         return new WoodWorkerEntity();
     }
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister){
-        blockIcon = iconRegister.registerIcon(Constants.MODID + ":" + "woodWorkerSide");
-        iconTop = iconRegister.registerIcon(Constants.MODID + ":" + "woodWorkerTop");
+
+    @Override
+    public void registerBlockIcons(IIconRegister iconRegister) {
+        for (int i = 0; i < icons.length; i++) {
+            icons[i] = iconRegister.registerIcon(Constants.MODID + ":" + name + i);
+        }
     }
+
+    @Override
+    public IIcon getIcon(int side, int meta) {
+        switch(side){
+
+            case 1:
+                return icons[1];
+
+            default: {
+                return icons[0];
+            }
+        }
+    }
+
 }
