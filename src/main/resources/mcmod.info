@@ -12,8 +12,7 @@
   "logoFile": "/assets/superblocks/logo.png",
   "screenshots": [],
   "dependencies": []
-}
-
+},
 {
   "modid": "superblocksore",
   "name": "SuperBlocksOre",
