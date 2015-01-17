@@ -1,17 +1,10 @@
 package com.totallyminecraft.superblocks.blocks;
 
-import com.totallyminecraft.superblocks.ModTabs;
-import com.totallyminecraft.superblocks.lib.Constants;
-import com.totallyminecraft.superblocks.tileEntity.TileEntityTestBlock;
-import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.ITileEntityProvider;
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.world.World;
-import org.lwjgl.input.Keyboard;
+        import com.totallyminecraft.superblocks.ModTabs;
+        import com.totallyminecraft.superblocks.lib.Constants;
+        import cpw.mods.fml.common.registry.GameRegistry;
+        import net.minecraft.block.Block;
+        import net.minecraft.block.material.Material;
 
 
 public class RawPlasticBlock extends Block{

@@ -7,12 +7,19 @@ achievement.superblocks.plankbyplank=Plank By Plank
 achievement.superblocks.plankbyplank.desc=Craft A Wood Worker
 achievement.superblocks.abittoasty=A Bit Toasty
 achievement.superblocks.abittoasty.desc=Make Some Edged Plastic
+achievement.superblocks.thehardway=Learn The Hard Way
+achievement.superblocks.thehardway.desc=You'll Find Out Eventually
 
 item.superblocks_bleachbucketItem.name=Bleach Bucket
 item.superblocks_quiverItem.name=Quiver
 item.superblocks_overbakedpotatoItem.name=Over Baked Potato
 item.superblocks_ironscrapItem.name=Iron Scrap
 item.superblocks_cuttingtorchItem.name=Cutting Torch
+item.superblocks_lithiumingotItem.name=Lithium Ingot
+item.superblocks_lithiumnuggetItem.name=Lithium Nugget
+item.superblocks_aluminumingotItem.name=Aluminum Ingot
+item.superblocks_jarItem.name=Jar
+item.superblocks_suspendedlithiumItem.name=Suspended Lithium
 
 tile.superblocks_testBlock.name=Test Block
 tile.superblocks_rawplasticBlock.name=Raw Plastic

@@ -1,23 +1,30 @@
 package com.totallyminecraft.superblocks;
 
+
 import com.totallyminecraft.superblocks.blocks.ModBlocks;
 import com.totallyminecraft.superblocks.gui.GuiHandler;
 import com.totallyminecraft.superblocks.items.ModItems;
 import com.totallyminecraft.superblocks.lib.Constants;
 import com.totallyminecraft.superblocks.tileEntity.ModTileEntities;
-import com.totallyminecraft.superblocks.world.WorldGeneratorSuperBlocks;
+import cpw.mods.fml.client.event.ConfigChangedEvent;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraftforge.common.config.Configuration;
+
 
 
 @Mod(modid = Constants.MODID, name = Constants.MODNAME, version = Constants.VERSION)
 
 
 public class SuperBlocks {
+
+    public static Configuration superblocksconfig;
+
 
     @Mod.Instance(Constants.MODID)
     public static SuperBlocks instance;
@@ -30,13 +37,22 @@ public class SuperBlocks {
         ModTileEntities.init();
         Crafting.init();
         ModOnXEvent.init();
-        //GameRegistry.registerWorldGenerator(new WorldGeneratorSuperBlocks(), 1);
 
+        superblocksconfig = new Configuration(event.getSuggestedConfigurationFile());
+        SuperBlocksConfig.syncConfig();
+   }
+
+
+    @SubscribeEvent
+    public void onConfigChanged(ConfigChangedEvent event){
+        if(event.modID.equals(Constants.MODID)){
+            SuperBlocksConfig.syncConfig();
+        }
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
-
+        FMLCommonHandler.instance().bus().register(instance);
         ModAchievements.init();
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 
@@ -44,6 +60,7 @@ public class SuperBlocks {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event){
+
 
     }
 
