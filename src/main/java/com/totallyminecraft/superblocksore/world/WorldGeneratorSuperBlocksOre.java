@@ -45,11 +45,11 @@ public class WorldGeneratorSuperBlocksOre implements IWorldGenerator{
 
     private void GenerateOverworld(Random random, int x, int z, World world) {
         if(SuperBlocksConfig.genLithiumOre) {
-            this.addOreSpawn(ModBlocks.lithiumoreBlock, world, random, x, z, 1, 3, 20, 0, 12);
+            this.addOreSpawn(ModBlocks.lithiumoreBlock, world, random, x, z, 1, 5, 60, 0, 56);
         }
 
         if(SuperBlocksConfig.genAluminumOre) {
-            this.addOreSpawn(ModBlocks.aluminumoreBlock, world, random, x, z, 1, 5, 30, 0, 56);
+            this.addOreSpawn(ModBlocks.aluminumoreBlock, world, random, x, z, 1, 5, 60, 0, 56);
         }
     }
     private void GenerateNether(Random random, int x, int z, World world) {
