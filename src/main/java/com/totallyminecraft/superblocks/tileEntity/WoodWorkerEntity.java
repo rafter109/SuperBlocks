@@ -71,7 +71,7 @@ public class WoodWorkerEntity extends TileEntity implements IInventory {
         }
     }
     public String getInventoryName() {
-        return "WoodCutterInv";
+        return "WoodWorkerInv";
     }
     public boolean hasCustomInventoryName() {
         return true;

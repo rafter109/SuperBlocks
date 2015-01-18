@@ -3,7 +3,6 @@ package com.totallyminecraft.superblocks.renderer;
 
 import com.totallyminecraft.superblocks.lib.Constants;
 import com.totallyminecraft.superblocks.model.ModelSlimWoodWorker;
-import com.totallyminecraft.superblocks.tileEntity.TileEntitySlimWoodWorkerBlock;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
