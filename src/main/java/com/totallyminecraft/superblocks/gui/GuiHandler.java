@@ -8,11 +8,13 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
+import javax.swing.text.html.parser.Entity;
+
 public class GuiHandler implements IGuiHandler{
 
 
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z){
-        WoodWorkerEntity entity = (WoodWorkerEntity) world.getTileEntity(x,y,z);
+        TileEntity entity = world.getTileEntity(x,y,z);
         if(entity != null){
             switch(ID){
                 case ModTileEntities.WoodWorkerID:

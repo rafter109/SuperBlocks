@@ -6,6 +6,7 @@ public class ModTileEntities {
     public static final int WoodWorkerID = 2550;
     public static final int SlimWoodWorkerID = 2551;
     public static final int BrickFurnaceID = 2552;
+    public static final int TestBlockID = 2553;
 
     public static void init(){
         GameRegistry.registerTileEntity(WoodWorkerEntity.class,"WoodWorker");
