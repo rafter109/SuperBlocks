@@ -13,6 +13,7 @@ public class SlotTest extends Slot
     }
     public boolean isItemValid(ItemStack par1ItemStack)
     {
-        return par1ItemStack.getItem() == ModItems.overbakedpotatoItem;
+        //to be used in brick furnace
+        return true;
     }
 }
