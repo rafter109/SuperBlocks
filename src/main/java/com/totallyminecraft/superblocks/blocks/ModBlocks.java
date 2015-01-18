@@ -2,6 +2,7 @@ package com.totallyminecraft.superblocks.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSapling;
 
 
 public final class ModBlocks {
@@ -20,6 +21,8 @@ public final class ModBlocks {
     public static Block woodWorker;
     public static Block brickFurnace;
     public static Block machinecoreBlock;
+    public static Block batterychargerBlock;
+    public static Block slimwoodworkerBlock;
 
     //stairs
     public static Block plastic_stairs;
@@ -47,6 +50,8 @@ public final class ModBlocks {
         woodWorker = new WoodWorkerBlock();
         brickFurnace = new BrickFurnaceBlock();
         machinecoreBlock = new MachineCoreBlock();
+        batterychargerBlock = new BatteryChargerBlock();
+        slimwoodworkerBlock = new SlimWoodWorkerBlock();
 
         //stairs
         for(int i=0; i < 16; i++) {

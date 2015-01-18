@@ -5,10 +5,12 @@ import com.totallyminecraft.superblocks.blocks.ModBlocks;
 import com.totallyminecraft.superblocks.gui.GuiHandler;
 import com.totallyminecraft.superblocks.items.ModItems;
 import com.totallyminecraft.superblocks.lib.Constants;
+import com.totallyminecraft.superblocks.proxy.CommonProxy;
 import com.totallyminecraft.superblocks.tileEntity.ModTileEntities;
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -29,6 +31,10 @@ public class SuperBlocks {
     @Mod.Instance(Constants.MODID)
     public static SuperBlocks instance;
 
+
+    @SidedProxy(clientSide = "com.totallyminecraft.superblocks.proxy.ClientProxy", serverSide = "com.totallyminecraft.superblocks.proxy.CommonProxy")
+    public static CommonProxy Proxy;
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){
 
@@ -40,6 +46,8 @@ public class SuperBlocks {
 
         superblocksconfig = new Configuration(event.getSuggestedConfigurationFile());
         SuperBlocksConfig.syncConfig();
+
+        Proxy.registerRenderThings();
    }
 
 

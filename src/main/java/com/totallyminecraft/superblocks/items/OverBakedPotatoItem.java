@@ -4,6 +4,7 @@ import com.totallyminecraft.superblocks.ModTabs;
 import com.totallyminecraft.superblocks.lib.Constants;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class OverBakedPotatoItem extends Item{
 

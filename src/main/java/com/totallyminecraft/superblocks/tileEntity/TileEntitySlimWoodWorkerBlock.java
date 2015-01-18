@@ -1,0 +1,7 @@
+package com.totallyminecraft.superblocks.tileEntity;
+
+
+import net.minecraft.tileentity.TileEntity;
+
+public class TileEntitySlimWoodWorkerBlock extends TileEntity{
+}
