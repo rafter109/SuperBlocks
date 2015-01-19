@@ -13,7 +13,7 @@ public class ModTabs {
         @Override
         @SideOnly(Side.CLIENT)
         public Item getTabIconItem() {
-            return Item.getItemFromBlock(ModBlocks.testBlock);
+            return Item.getItemFromBlock(ModBlocks.plasticBlock);
         }
     };
 

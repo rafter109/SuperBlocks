@@ -2,12 +2,10 @@ package com.totallyminecraft.superblocks.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockSapling;
 
 
 public final class ModBlocks {
 
-    public static Block testBlock;
     public static Block plasticBlock;
     public static Block edgedplasticBlock;
     public static Block coloredBrickBlock;
@@ -35,8 +33,6 @@ public final class ModBlocks {
 
 
     public static void init(){
-
-        testBlock = new TestBlock();
         plasticBlock = new PlasticBlock();
         edgedplasticBlock = new EdgedPlasticBlock();
         coloredBrickBlock = new ColoredBrickBlock();
