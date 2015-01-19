@@ -47,8 +47,8 @@ public class TestBlock extends Block implements ITileEntityProvider{
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer entityPlayer, int par1, float par2, float par3, float par4) {
 
-        if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
-            if (!world.isRemote) {
+        if (!world.isRemote) {
+            if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
                 TestBlockActive = !TestBlockActive;
                 if(TestBlockActive){
                     entityPlayer.addChatComponentMessage(status1);
