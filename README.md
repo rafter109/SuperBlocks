@@ -9,15 +9,15 @@ Want a current list of screenshots? Click [HERE](http://mc3.totallyminecraft.com
 
 ##TODO:
 + ~~Add Crafting to Wood Worker~~
---+ Add Fancy Wood
---+ Give Fancy Wood Recipies in Wood Worker
+--* Add Fancy Wood
+--* Give Fancy Wood Recipies in Wood Worker
 + Fix Slim Wood Worker
 + Add Functionality to Brick Furnace
 + Add Rotation to:
---+ Batery Charger
---+ Wood Worker
---+ Slim Wood Worker
---+ Brick Furnace
---+ Fancy Bricks
---+ Fancy Wood
+--* Batery Charger
+--* Wood Worker
+--* Slim Wood Worker
+--* Brick Furnace
+--* Fancy Bricks
+--* Fancy Wood
 + Add Gui to Quiver
