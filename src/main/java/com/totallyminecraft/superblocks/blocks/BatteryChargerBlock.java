@@ -63,10 +63,4 @@ public class BatteryChargerBlock extends BlockContainer {
     }
 
 
-    //possibly dont need check after block render in hand is working
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister){
-        this.blockIcon = iconRegister.registerIcon(Constants.MODID + ":" + this.getUnlocalizedName().substring(5));
-    }
-
 }

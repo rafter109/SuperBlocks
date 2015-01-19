@@ -19,11 +19,11 @@ public class ClientProxy extends CommonProxy{
 
         TileEntitySpecialRenderer renderBatterycharger = new RenderBatteryCharger();
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBatteryChargerBlock.class, renderBatterycharger);
-        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ModBlocks.batterychargerBlock), new ItemRenderBatteryCharger(renderBatterycharger, new TileEntityBatteryChargerBlock()));
+        //MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ModBlocks.batterychargerBlock), new ItemRenderBatteryCharger(renderBatterycharger, new TileEntityBatteryChargerBlock()));
 
         TileEntitySpecialRenderer renderSlimWoodWorker = new RenderSlimWoodWorker();
         ClientRegistry.bindTileEntitySpecialRenderer(SlimWoodWorkerEntity.class, renderSlimWoodWorker);
-        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ModBlocks.slimwoodworkerBlock), new ItemRenderSlimWoodWorker(renderSlimWoodWorker, new SlimWoodWorkerEntity()));
+        //MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ModBlocks.slimwoodworkerBlock), new ItemRenderSlimWoodWorker(renderSlimWoodWorker, new SlimWoodWorkerEntity()));
 
     }
 

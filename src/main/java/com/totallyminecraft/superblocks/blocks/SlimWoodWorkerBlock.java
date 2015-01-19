@@ -17,15 +17,15 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 public class SlimWoodWorkerBlock extends BlockContainer {
-    private String name;
+    private String name = "slimwoodworkerBlock";
     private IIcon[] icons = new IIcon[6];
 
     public SlimWoodWorkerBlock() {
         super(Material.rock);
-        name = "SlimWoodWorker";
         setBlockName(Constants.MODID + "_" + name);
         setCreativeTab(ModTabs.tabSuperBlocks);
-        GameRegistry.registerBlock(this, ItemBlockMultiBlock.class, name);
+        GameRegistry.registerBlock(this, name);
+        setBlockTextureName(Constants.MODID + ":" + name);
         setResistance(30f);
         setHardness(1.5f);
         setHarvestLevel("pickaxe", 1);
@@ -70,9 +70,6 @@ public class SlimWoodWorkerBlock extends BlockContainer {
         return new SlimWoodWorkerEntity();
     }
     //possibly dont need check after block render in hand is working
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister){
-        this.blockIcon = iconRegister.registerIcon(Constants.MODID + ":" + this.getUnlocalizedName().substring(5));
-    }
+
 
 }
