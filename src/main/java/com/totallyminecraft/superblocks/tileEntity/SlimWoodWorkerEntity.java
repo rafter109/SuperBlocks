@@ -64,6 +64,7 @@ public class SlimWoodWorkerEntity extends TileEntity implements IInventory {
         slots[i] = itemStack;
         if(itemStack != null && itemStack.stackSize > getInventoryStackLimit()){
             itemStack.stackSize = getInventoryStackLimit();
+            System.out.println(itemStack);
         }
     }
     public String getInventoryName() {
