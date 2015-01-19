@@ -7,7 +7,7 @@ Want a current list of screenshots? Click [HERE](http://mc3.totallyminecraft.com
 #WARNING:
 **_All aspects of this mod are subject to change at any given time!_**
 
-##TODO:
+#TODO:
 + ~~Add Crafting to Wood Worker~~
 --
 
@@ -20,6 +20,8 @@ Want a current list of screenshots? Click [HERE](http://mc3.totallyminecraft.com
 --
 
 + Add Rotation to:
+--
+
 * Batery Charger
 * Wood Worker
 * Slim Wood Worker
