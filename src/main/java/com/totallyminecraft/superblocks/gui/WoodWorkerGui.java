@@ -1,26 +1,24 @@
 package com.totallyminecraft.superblocks.gui;
 
 import com.totallyminecraft.superblocks.lib.Constants;
-import com.totallyminecraft.superblocks.tileEntity.WoodWorkerEntity;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.StatCollector;
+import net.minecraft.world.World;
 
 public class WoodWorkerGui extends GuiContainer{
+    public static final int ID = 1;
     public static final ResourceLocation backgroundimage = new ResourceLocation(Constants.MODID, "textures/gui/woodWorkerGui.png");
-    public WoodWorkerEntity woodCutter;
-    public WoodWorkerGui(InventoryPlayer invPlayer, TileEntity entity){
-        super(new WoodWorkerInv(invPlayer, (WoodWorkerEntity) entity));
-        woodCutter = (WoodWorkerEntity) entity;
+    public WoodWorkerGui(InventoryPlayer invPlayer, World world ,int x, int y, int z){
+        super(new WoodWorkerContainer(invPlayer, world, x, y, z));
         xSize = 176;
         ySize = 166;
     }
+    public void onGuiClosed(){ super.onGuiClosed(); }
     public void drawGuiContainerForegroundLayer(int par1, int par2){
-        String local = woodCutter.isInvNameLocalized() ? woodCutter.getInvName() : I18n.format(woodCutter.getInvName());
-        fontRendererObj.drawString(local, xSize / 2 - fontRendererObj.getStringWidth(local), 6, 4210753);
-        fontRendererObj.drawString(I18n.format("container.inventory"), 8, ySize - 94, 4210753);
+        fontRendererObj.drawString(StatCollector.translateToLocal("Wood Worker"),30,5,0x000000);
     }
     public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3){
         mc.getTextureManager().bindTexture(backgroundimage);

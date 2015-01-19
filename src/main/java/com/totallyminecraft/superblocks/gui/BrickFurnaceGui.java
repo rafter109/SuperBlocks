@@ -1,7 +1,7 @@
 package com.totallyminecraft.superblocks.gui;
 
 import com.totallyminecraft.superblocks.lib.Constants;
-import com.totallyminecraft.superblocks.tileEntity.WoodWorkerEntity;
+import com.totallyminecraft.superblocks.tileEntity.BrickFurnaceEntity;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -10,10 +10,10 @@ import net.minecraft.util.ResourceLocation;
 
 public class BrickFurnaceGui extends GuiContainer{
     public static final ResourceLocation backgroundimage = new ResourceLocation(Constants.MODID, "textures/gui/BrickFurnaceGui.png");
-    public WoodWorkerEntity woodCutter;
+    public BrickFurnaceEntity woodCutter;
     public BrickFurnaceGui(InventoryPlayer invPlayer, TileEntity entity){
-        super(new WoodWorkerInv(invPlayer, (WoodWorkerEntity) entity));
-        woodCutter = (WoodWorkerEntity) entity;
+        super(new BrickFurnaceInv(invPlayer, (BrickFurnaceEntity) entity));
+        woodCutter = (BrickFurnaceEntity) entity;
         xSize = 176;
         ySize = 166;
     }
