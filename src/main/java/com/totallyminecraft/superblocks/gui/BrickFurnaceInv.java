@@ -1,12 +1,10 @@
 package com.totallyminecraft.superblocks.gui;
 
 import com.totallyminecraft.superblocks.tileEntity.BrickFurnaceEntity;
-import com.totallyminecraft.superblocks.tileEntity.WoodWorkerEntity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
-import net.minecraft.inventory.SlotCrafting;
 import net.minecraft.item.ItemStack;
 
 public class BrickFurnaceInv extends Container {
