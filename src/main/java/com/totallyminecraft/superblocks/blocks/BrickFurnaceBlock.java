@@ -5,7 +5,6 @@ import com.totallyminecraft.superblocks.SuperBlocks;
 import com.totallyminecraft.superblocks.lib.Constants;
 import com.totallyminecraft.superblocks.tileEntity.BrickFurnaceEntity;
 import com.totallyminecraft.superblocks.tileEntity.ModTileEntities;
-import com.totallyminecraft.superblocks.tileEntity.WoodWorkerEntity;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -53,11 +52,17 @@ public class BrickFurnaceBlock extends BlockContainer{
     public IIcon getIcon(int side, int meta) {
         switch(side){
 
+            case 0:
+                return icons[0];
+
             case 1:
-                return icons[1];
+                return icons[0];
+
+            case 2:
+                return icons[2];
 
             default: {
-                return icons[0];
+                return icons[3];
             }
         }
     }
