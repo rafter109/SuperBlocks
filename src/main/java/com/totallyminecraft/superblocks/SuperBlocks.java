@@ -4,6 +4,7 @@ package com.totallyminecraft.superblocks;
 import com.totallyminecraft.superblocks.blocks.ModBlocks;
 import com.totallyminecraft.superblocks.crafting.Crafting;
 import com.totallyminecraft.superblocks.gui.GuiHandler;
+import com.totallyminecraft.superblocks.items.LithiumIngotItem;
 import com.totallyminecraft.superblocks.items.ModItems;
 import com.totallyminecraft.superblocks.lib.Constants;
 import com.totallyminecraft.superblocks.proxy.CommonProxy;
@@ -16,6 +17,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import net.minecraftforge.common.config.Configuration;
 
@@ -28,6 +30,7 @@ public class SuperBlocks {
 
     public static Configuration superblocksconfig;
 
+    private int tick;
 
     @Mod.Instance(Constants.MODID)
     public static SuperBlocks instance;
@@ -58,6 +61,7 @@ public class SuperBlocks {
             SuperBlocksConfig.syncConfig();
         }
     }
+
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){

@@ -35,6 +35,7 @@ public final class ModBlocks {
 
 
 
+
     public static void init(){
         plasticBlock = new PlasticBlock();
         edgedplasticBlock = new EdgedPlasticBlock();
@@ -53,6 +54,7 @@ public final class ModBlocks {
         machinecoreBlock = new MachineCoreBlock();
         batterychargerBlock = new BatteryChargerBlock();
         slimwoodworkerBlock = new SlimWoodWorkerBlock();
+
 
         //stairs
         for(int i=0; i < 16; i++) {

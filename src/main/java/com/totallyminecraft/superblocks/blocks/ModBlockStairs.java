@@ -10,16 +10,11 @@ public class ModBlockStairs extends BlockStairs {
 
 
     //Used for meta block
-    public ModBlockStairs(String unlocalizedName, Block baseBlock, int metaOfBlock){
+    public ModBlockStairs(String unlocalizedName, Block baseBlock, int metaOfBlock) {
         super(baseBlock, metaOfBlock);
         this.setBlockName(Constants.MODID + "_" + unlocalizedName);
         this.setCreativeTab(ModTabs.tabSuperBlocks);
     }
 
-
-    //Used for non meta block
- //   public ModBlockStairs(String unlocalizedName, Block baseBlock) {
- //       this(unlocalizedName, baseBlock, 0);
- //   }
 
 }

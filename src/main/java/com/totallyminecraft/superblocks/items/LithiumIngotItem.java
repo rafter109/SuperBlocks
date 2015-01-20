@@ -11,16 +11,19 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 import java.util.List;
+import java.util.Random;
 
 public class LithiumIngotItem extends Item{
 
 
     private String name = "lithiumingotItem";
 
-    private int tick = 0;
+    private static Random rand = new Random();
+    private static int boom = 25 + rand.nextInt(10);
 
     public LithiumIngotItem() {
 
@@ -35,20 +38,7 @@ public class LithiumIngotItem extends Item{
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
     {
         {
-            par3List.add("Place your subtext here");
-        }
-    }
-
-    @Override
-    public void onUpdate(ItemStack par1ItemStack, World par2World, Entity par3Entity, int par4, boolean par5) {
-        if (! par2World.isRemote) {
-            if (tick > 100) {
-
-                System.out.println("I Work!");
-
-                tick = 0;
-            }
-            tick++;
+            par3List.add("Material State: " + EnumChatFormatting.GOLD + "Unstable");
         }
     }
 
