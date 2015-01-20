@@ -264,3 +264,20 @@ tile.superblocks_coloredemerald_stairs14.name=Stairs14
 tile.superblocks_coloredemerald_stairs15.name=Stairs15
 
 tile.superblocks_WoodWorker.0Meta.name=Wood Worker
+
+tile.superblocks_fancyWoodBlock.0Meta.name=Segmented Planks
+tile.superblocks_fancyWoodBlock.1Meta.name=Aligned Planks
+tile.superblocks_fancyWoodBlock.2Meta.name=Large Planks
+tile.superblocks_fancyWoodBlock.3Meta.name=Large Segmented Planks
+tile.superblocks_fancyWoodBlock.4Meta.name=Tiled Planks
+tile.superblocks_fancyWoodBlock.5Meta.name=Diagonal Tiled Planks
+tile.superblocks_fancyWoodBlock.6Meta.name=Carved Planks 1
+tile.superblocks_fancyWoodBlock.7Meta.name=Carved Planks 2
+tile.superblocks_fancyWoodBlock.8Meta.name=Diagonal Carved Planks
+tile.superblocks_fancyWoodBlock.9Meta.name=Plank Grid
+tile.superblocks_fancyWoodBlock.10Meta.name=Diagonal Plank Grid
+tile.superblocks_fancyWoodBlock.11Meta.name=Squared Planks
+tile.superblocks_fancyWoodBlock.12Meta.name=Diagonal Planks
+tile.superblocks_fancyWoodBlock.13Meta.name=Diagonal Segmented Planks
+tile.superblocks_fancyWoodBlock.14Meta.name=Wood 14
+tile.superblocks_fancyWoodBlock.15Meta.name=Wood 15
