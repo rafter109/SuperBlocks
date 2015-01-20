@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+
+import com.totallyminecraft.superblocks.blocks.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -20,7 +22,6 @@ public class WoodWorkerCraftingManager
 {
     private static final WoodWorkerCraftingManager instance = new WoodWorkerCraftingManager();
     private List recipes = new ArrayList();
-    private static final String __OBFID = "CL_00000090";
 
     public static final WoodWorkerCraftingManager getInstance()
     {
@@ -31,16 +32,23 @@ public class WoodWorkerCraftingManager
     {
         //logs to planks
         for (int i=0; i < 3; i++){
-            this.addRecipe(new ItemStack(Blocks.planks, 4, i), new Object[] {"#", '#', new ItemStack(Blocks.log, 1, i)});
+            this.addRecipe(new ItemStack(Blocks.planks, 4, i), new Object[]{"#", '#', new ItemStack(Blocks.log, 1, i)});
         }
         //planks to slabs
         for (int i=0; i < 5; i++){
-            this.addRecipe(new ItemStack(Blocks.wooden_slab, 6, i), new Object[] {"###", '#', new ItemStack(Blocks.planks, 1, i)});
+            this.addRecipe(new ItemStack(Blocks.wooden_slab, 6, i), new Object[]{"###", '#', new ItemStack(Blocks.planks, 1, i)});
         }
-        this.addRecipe(new ItemStack(Blocks.planks, 4, 4), new Object[] {"#", '#', new ItemStack(Blocks.log2, 1, 0)});
-        this.addRecipe(new ItemStack(Blocks.planks, 4, 5), new Object[] {"#", '#', new ItemStack(Blocks.log2, 1, 1)});
+        this.addRecipe(new ItemStack(Blocks.planks, 4, 4), new Object[]{"#", '#', new ItemStack(Blocks.log2, 1, 0)});
+        this.addRecipe(new ItemStack(Blocks.planks, 4, 5), new Object[]{"#", '#', new ItemStack(Blocks.log2, 1, 1)});
         //planks to sticks
-        this.addRecipe(new ItemStack(Items.stick, 4), new Object[] {"#", "#", '#', Blocks.planks});
+        this.addRecipe(new ItemStack(Items.stick, 4), new Object[]{"#", "#", '#', Blocks.planks});
+        //Stairs
+        this.addRecipe(new ItemStack(Blocks.oak_stairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 0)});
+        this.addRecipe(new ItemStack(Blocks.birch_stairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 2)});
+        this.addRecipe(new ItemStack(Blocks.spruce_stairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(Blocks.jungle_stairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 3)});
+        this.addRecipe(new ItemStack(Blocks.acacia_stairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 4)});
+        this.addRecipe(new ItemStack(Blocks.dark_oak_stairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 5)});
         /**TODO: ADD RECIPIES HERE*/
 
         Collections.sort(this.recipes, new WoodWorkerRecipeSorter());

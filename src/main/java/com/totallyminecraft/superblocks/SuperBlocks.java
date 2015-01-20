@@ -2,6 +2,7 @@ package com.totallyminecraft.superblocks;
 
 
 import com.totallyminecraft.superblocks.blocks.ModBlocks;
+import com.totallyminecraft.superblocks.crafting.Crafting;
 import com.totallyminecraft.superblocks.gui.GuiHandler;
 import com.totallyminecraft.superblocks.items.ModItems;
 import com.totallyminecraft.superblocks.lib.Constants;

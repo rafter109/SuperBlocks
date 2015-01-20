@@ -16,7 +16,7 @@ Want a current list of screenshots? Click [HERE](http://mc3.totallyminecraft.com
 * Fix Slim Wood Worker
 --
 
-* Add Functionality to Brick Furnace
+* ~~Add Functionality to Brick Furnace~~
 --
 
 * Add Rotation to:

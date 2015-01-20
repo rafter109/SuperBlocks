@@ -1,6 +1,8 @@
 package com.totallyminecraft.superblocks.gui;
 
 import com.totallyminecraft.superblocks.blocks.ModBlocks;
+import com.totallyminecraft.superblocks.tileEntity.BrickFurnaceEntity;
+import com.totallyminecraft.superblocks.tileEntity.ModTileEntities;
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
@@ -13,6 +15,11 @@ public class GuiHandler implements IGuiHandler{
         TileEntity entity = world.getTileEntity(x,y,z);
         if(entity != null){
             switch(ID){
+                case ModTileEntities.BrickFurnaceID:
+                    if (entity instanceof BrickFurnaceEntity) {
+                        return new BrickFurnaceContainer(player.inventory, (BrickFurnaceEntity) entity);
+                    }
+                    return null;
                 default:
                     return null;
             }
@@ -28,6 +35,11 @@ public class GuiHandler implements IGuiHandler{
         TileEntity entity = world.getTileEntity(x,y,z);
         if(entity != null){
             switch(ID){
+                case ModTileEntities.BrickFurnaceID:
+                    if (entity instanceof BrickFurnaceEntity) {
+                        return new BrickFurnaceGui(player.inventory, (BrickFurnaceEntity) entity);
+                    }
+                    return null;
                 default:
                     return null;
             }

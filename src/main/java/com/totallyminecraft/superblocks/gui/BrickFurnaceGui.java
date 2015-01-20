@@ -5,31 +5,33 @@ import com.totallyminecraft.superblocks.tileEntity.BrickFurnaceEntity;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 
 public class BrickFurnaceGui extends GuiContainer{
-    public static final ResourceLocation backgroundimage = new ResourceLocation(Constants.MODID, "textures/gui/BrickFurnaceGui.png");
-    public BrickFurnaceEntity woodCutter;
-    public BrickFurnaceGui(InventoryPlayer invPlayer, TileEntity entity){
-        super(new BrickFurnaceInv(invPlayer, (BrickFurnaceEntity) entity));
-        woodCutter = (BrickFurnaceEntity) entity;
+    public static final ResourceLocation guiTexture = new ResourceLocation(Constants.MODID + ":" + "textures/gui/brickFurnaceGui.png");
+    public BrickFurnaceEntity brickFurnace;
+    public BrickFurnaceGui(InventoryPlayer inventoryPlayer, BrickFurnaceEntity entity) {
+        super(new BrickFurnaceContainer(inventoryPlayer, entity));
+        brickFurnace = entity;
         xSize = 176;
         ySize = 166;
     }
-    public void drawGuiContainerForegroundLayer(int par1, int par2){
-        String local = woodCutter.isInvNameLocalized() ? woodCutter.getInvName() : I18n.format(woodCutter.getInvName());
-        fontRendererObj.drawString(local, xSize / 2 - fontRendererObj.getStringWidth(local), 6, 4210753);
-        fontRendererObj.drawString(I18n.format("container.inventory"), 8, ySize - 94, 4210753);
+    public void drawGuiContainerForegroundLayer(int par1, int par2) {
+        String name = brickFurnace.hasCustomInventoryName() ? brickFurnace.getInventoryName() : I18n.format(brickFurnace.getInventoryName(), new Object[0]);
+        fontRendererObj.drawString(name, xSize / 2 - fontRendererObj.getStringWidth(name) / 2, 6, 4210752);
+        fontRendererObj.drawString(I18n.format("container.inventory", new Object[0]), 118, ySize - 96 + 2, 4210752);
     }
-    public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3){
-        mc.getTextureManager().bindTexture(backgroundimage);
-        par2 = (width - xSize) / 2;
-        int j = (height - ySize) / 2;
-        drawTexturedModalRect(par2, j, 0, 0, xSize,  ySize);
-    }
-    public boolean doesGuiPauseGame()
-    {
-        return false;
+    @Override
+    protected void drawGuiContainerBackgroundLayer(float var1, int var2, int var3) {
+        GL11.glColor4f(1F, 1F, 1F, 1F);
+        mc.getMinecraft().getTextureManager().bindTexture(guiTexture);
+        drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
+        if(brickFurnace.isBurning()) {
+            int k = brickFurnace.getBurnTimeRemainingScaled(13);
+            drawTexturedModalRect(guiLeft + 56, guiTop + 48 - k, 176, 12 - k, 14, k + 1);
+            int j = brickFurnace.getCookProgressScaled(24);
+            drawTexturedModalRect(guiLeft + 79, guiTop + 34, 176, 14, j + 1, 16);
+        }
     }
 }

@@ -1,4 +1,4 @@
-package com.totallyminecraft.superblocks;
+package com.totallyminecraft.superblocks.crafting;
 
 import com.totallyminecraft.superblocks.blocks.ModBlocks;
 import com.totallyminecraft.superblocks.items.ModItems;
