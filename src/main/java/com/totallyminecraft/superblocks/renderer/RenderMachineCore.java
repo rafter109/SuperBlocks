@@ -24,7 +24,7 @@ public class RenderMachineCore extends TileEntitySpecialRenderer{
         GL11.glPushMatrix();
         GL11.glTranslatef((float)x + 0.5F, (float)y + 1.5625F, (float)z + 0.5F);
         TileEntityMachineCore tile = (TileEntityMachineCore) tileentity;
-        GL11.glRotatef(180, 0.0F, 1.0F, 0.0F);
+        GL11.glRotatef(180, 0.0F, 0.0F, 1.0F);
             this.bindTexture(texture);
 
             GL11.glPushMatrix();
