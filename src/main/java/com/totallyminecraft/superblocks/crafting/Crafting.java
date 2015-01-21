@@ -50,6 +50,9 @@ public class Crafting {
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.lithiumnuggetItem, 4), new Object[]{ModItems.lithiumingotItem});
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.suspendedlithiumItem) , new Object[]{ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem,
                 ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem, ModItems.jarItem});
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.lithiumCellStackItem), new Object[]{ModItems.lithiumCellItem, ModItems.lithiumCellItem, ModItems.lithiumCellItem, ModItems.lithiumCellItem});
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.foilItem), new Object[]{ModItems.ironscrapItem});
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.lithiumBatteryItem), new Object[]{ModItems.foilItem, ModItems.lithiumCellStackItem});
 
 
 
