@@ -51,20 +51,17 @@ public class WoodWorkerCraftingManager
         this.addRecipe(new ItemStack(Blocks.dark_oak_stairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 5)});
         /**TODO: ADD RECIPIES HERE*/
 
-        Collections.sort(this.recipes, new WoodWorkerRecipeSorter());
+        Collections.sort(this.recipes, new WoodWorkerRecipeSorter(this));
     }
-
     public ShapedRecipes addRecipe(ItemStack p_92103_1_, Object ... p_92103_2_)
     {
         String s = "";
         int i = 0;
         int j = 0;
         int k = 0;
-
         if (p_92103_2_[i] instanceof String[])
         {
             String[] astring = (String[])((String[])p_92103_2_[i++]);
-
             for (int l = 0; l < astring.length; ++l)
             {
                 String s1 = astring[l];
@@ -83,9 +80,7 @@ public class WoodWorkerCraftingManager
                 s = s + s2;
             }
         }
-
         HashMap hashmap;
-
         for (hashmap = new HashMap(); i < p_92103_2_.length; i += 2)
         {
             Character character = (Character)p_92103_2_[i];
@@ -106,9 +101,7 @@ public class WoodWorkerCraftingManager
 
             hashmap.put(character, itemstack1);
         }
-
         ItemStack[] aitemstack = new ItemStack[j * k];
-
         for (int i1 = 0; i1 < j * k; ++i1)
         {
             char c0 = s.charAt(i1);
@@ -122,7 +115,6 @@ public class WoodWorkerCraftingManager
                 aitemstack[i1] = null;
             }
         }
-
         ShapedRecipes shapedrecipes = new ShapedRecipes(j, k, aitemstack, p_92103_1_);
         this.recipes.add(shapedrecipes);
         return shapedrecipes;
@@ -133,11 +125,9 @@ public class WoodWorkerCraftingManager
         ArrayList arraylist = new ArrayList();
         Object[] aobject = p_77596_2_;
         int i = p_77596_2_.length;
-
         for (int j = 0; j < i; ++j)
         {
             Object object1 = aobject[j];
-
             if (object1 instanceof ItemStack)
             {
                 arraylist.add(((ItemStack)object1).copy());
@@ -156,21 +146,17 @@ public class WoodWorkerCraftingManager
                 arraylist.add(new ItemStack((Block)object1));
             }
         }
-
         this.recipes.add(new ShapelessRecipes(p_77596_1_, arraylist));
     }
-
     public ItemStack findMatchingRecipe(InventoryCrafting p_82787_1_, World p_82787_2_)
     {
         int i = 0;
         ItemStack itemstack = null;
         ItemStack itemstack1 = null;
         int j;
-
         for (j = 0; j < p_82787_1_.getSizeInventory(); ++j)
         {
             ItemStack itemstack2 = p_82787_1_.getStackInSlot(j);
-
             if (itemstack2 != null)
             {
                 if (i == 0)
@@ -182,11 +168,9 @@ public class WoodWorkerCraftingManager
                 {
                     itemstack1 = itemstack2;
                 }
-
                 ++i;
             }
         }
-
         if (i == 2 && itemstack.getItem() == itemstack1.getItem() && itemstack.stackSize == 1 && itemstack1.stackSize == 1 && itemstack.getItem().isRepairable())
         {
             Item item = itemstack.getItem();
@@ -194,12 +178,10 @@ public class WoodWorkerCraftingManager
             int k = item.getMaxDamage() - itemstack1.getItemDamageForDisplay();
             int l = j1 + k + item.getMaxDamage() * 5 / 100;
             int i1 = item.getMaxDamage() - l;
-
             if (i1 < 0)
             {
                 i1 = 0;
             }
-
             return new ItemStack(itemstack.getItem(), 1, i1);
         }
         else
@@ -213,7 +195,6 @@ public class WoodWorkerCraftingManager
                     return irecipe.getCraftingResult(p_82787_1_);
                 }
             }
-
             return null;
         }
     }
