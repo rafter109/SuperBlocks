@@ -16,18 +16,20 @@ public class WoodWorkerContainer extends Container {
     private int pozZ;
     public WoodWorkerContainer(InventoryPlayer invPlayer, World world, int x, int y, int z)
     {
-        woodWorker= new InventoryCrafting(this, 3, 3);
+        woodWorker= new InventoryCrafting(this, 5, 5);
         craftResult = new InventoryCraftResult();
         worldObj = world;
         pozX = x;
         pozY = y;
         pozZ = z;
 
-        addSlotToContainer(new SlotCrafting(invPlayer.player, woodWorker, craftResult, 0, 124, 35));
+        addSlotToContainer(new SlotCrafting(invPlayer.player, woodWorker, craftResult, 0, 138, 43));
         int id = 0;
-        for(int i = 0; i<3; i++){
-            for(int j = 0; j<3; j++){
-                addSlotToContainer(new Slot(woodWorker, id, i * 18 + 30, j * 18 + 17));
+        int Gx = 6;
+        int Gy = 6;
+        for(int i = 0; i<5; i++){
+            for(int j = 0; j<5; j++){
+                addSlotToContainer(new Slot(woodWorker, id, i * 18 + Gx, j * 18 + Gy));
                 id++;
             }
         }
@@ -44,14 +46,14 @@ public class WoodWorkerContainer extends Container {
         int idI = 0;
         for(int i = 0; i < 9; i++)
         {
-            addSlotToContainer(new Slot(inventoryPlayer, idI, i * 18 + 8, 142));
+            addSlotToContainer(new Slot(inventoryPlayer, idI, i * 18 + 6, 158));
             idI++;
         }
         for(int i = 0; i < 3; i++)
         {
             for(int j = 0; j < 9; j++)
             {
-                addSlotToContainer(new Slot(inventoryPlayer, idI ,j * 18 + 8, i * 18 + 84 ));
+                addSlotToContainer(new Slot(inventoryPlayer, idI ,j * 18 + 6, i * 18 + 100 ));
                 idI++;
             }
         }
@@ -64,11 +66,9 @@ public class WoodWorkerContainer extends Container {
     }
     public void onContainerClosed(EntityPlayer par1EntityPlayer) {
         super.onContainerClosed(par1EntityPlayer);
-
         if (!this.worldObj.isRemote) {
             for (int i = 0; i < 9; ++i) {
                 ItemStack itemstack = this.woodWorker.getStackInSlotOnClosing(i);
-
                 if (itemstack != null) {
                     par1EntityPlayer.dropPlayerItemWithRandomChoice(itemstack, false);
                 }

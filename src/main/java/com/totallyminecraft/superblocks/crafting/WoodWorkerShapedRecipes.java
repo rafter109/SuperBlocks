@@ -20,15 +20,10 @@ public class WoodWorkerShapedRecipes implements IRecipe {
         recipeItems = par3ArrayOfItemStack;
         recipeOutput = par4ItemStack;
     }
-
     public ItemStack getRecipeOutput()
     {
         return recipeOutput;
     }
-
-    /**
-     * Used to check if a recipe matches current crafting inventory
-     */
     public boolean matches(InventoryCrafting par1InventoryCrafting, World par2World)
     {
         for (int i = 0; i <= 3 - recipeWidth; ++i)
@@ -39,20 +34,14 @@ public class WoodWorkerShapedRecipes implements IRecipe {
                 {
                     return true;
                 }
-
                 if (checkMatch(par1InventoryCrafting, i, j, false))
                 {
                     return true;
                 }
             }
         }
-
         return false;
     }
-
-    /**
-     * Checks if the region of a crafting inventory is match for the recipe.
-     */
     private boolean checkMatch(InventoryCrafting par1InventoryCrafting, int par2, int par3, boolean par4)
     {
         for (int k = 0; k < 5; ++k)
@@ -62,7 +51,6 @@ public class WoodWorkerShapedRecipes implements IRecipe {
                 int i1 = k - par2;
                 int j1 = l - par3;
                 ItemStack itemstack = null;
-
                 if (i1 >= 0 && j1 >= 0 && i1 < recipeWidth && j1 < recipeHeight)
                 {
                     if (par4)
@@ -74,21 +62,17 @@ public class WoodWorkerShapedRecipes implements IRecipe {
                         itemstack = recipeItems[i1 + j1 * recipeWidth];
                     }
                 }
-
                 ItemStack itemstack1 = par1InventoryCrafting.getStackInRowAndColumn(k, l);
-
                 if (itemstack1 != null || itemstack != null)
                 {
                     if (itemstack1 == null && itemstack != null || itemstack1 != null && itemstack == null)
                     {
                         return false;
                     }
-
                     if (itemstack.getItem() != itemstack1.getItem())
                     {
                         return false;
                     }
-
                     if (itemstack.getItemDamage() != 32767 && itemstack.getItemDamage() != itemstack1.getItemDamage())
                     {
                         return false;
@@ -96,13 +80,8 @@ public class WoodWorkerShapedRecipes implements IRecipe {
                 }
             }
         }
-
         return true;
     }
-
-    /**
-     * Returns an Item that is the result of this recipe
-     */
     public ItemStack getCraftingResult(InventoryCrafting par1InventoryCrafting)
     {
         ItemStack itemstack = getRecipeOutput().copy();

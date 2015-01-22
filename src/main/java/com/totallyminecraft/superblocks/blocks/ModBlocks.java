@@ -10,7 +10,6 @@ public final class ModBlocks {
     public static Block edgedplasticBlock;
     public static Block coloredBrickBlock;
     public static Block fancyBrickBlock;
-    public static Block fancyWoodBlock;
     public static Block coloredobsidianBlock;
     public static Block coloredemeraldBlock;
     public static Block rawplasticBlock;
@@ -22,7 +21,13 @@ public final class ModBlocks {
     public static Block brickFurnaceActive;
     public static Block machinecoreBlock;
     public static Block batterychargerBlock;
-    public static Block slimwoodworkerBlock;
+
+    public static Block fancyAcaciaBlock;
+    public static Block fancyBirchBlock;
+    public static Block fancyDarkOakBlock;
+    public static Block fancyJungleBlock;
+    public static Block fancyOakBlock;
+    public static Block fancySpruceBlock;
 
     //stairs
     public static Block plastic_stairs;
@@ -31,7 +36,13 @@ public final class ModBlocks {
     public static Block coloredobsidian_stairs;
     public static Block coloredemerald_stairs;
     public static Block fancybrick_stairs;
-    public static Block fancywood_stairs;
+
+    public static Block fancyAcacia_stairs;
+    public static Block fancyBirch_stairs;
+    public static Block fancyDarkOak_stairs;
+    public static Block fancyJungle_stairs;
+    public static Block fancyOak_stairs;
+    public static Block fancySpruce_stairs;
 
 
 
@@ -41,7 +52,6 @@ public final class ModBlocks {
         edgedplasticBlock = new EdgedPlasticBlock();
         coloredBrickBlock = new ColoredBrickBlock();
         fancyBrickBlock = new FancyBrickBlock();
-        fancyWoodBlock = new FancyWoodBlock();
         coloredobsidianBlock = new ColoredObsidianBlock();
         coloredemeraldBlock = new ColoredEmeraldBlock();
         rawplasticBlock = new RawPlasticBlock();
@@ -53,8 +63,13 @@ public final class ModBlocks {
         brickFurnaceActive = new BrickFurnaceBlock(true);
         machinecoreBlock = new MachineCoreBlock();
         batterychargerBlock = new BatteryChargerBlock();
-        slimwoodworkerBlock = new SlimWoodWorkerBlock();
 
+        fancyAcaciaBlock = new FancyWoodBlock(1);
+        fancyBirchBlock = new FancyWoodBlock(2);
+        fancyDarkOakBlock = new FancyWoodBlock(3);
+        fancyJungleBlock = new FancyWoodBlock(4);
+        fancyOakBlock = new FancyWoodBlock(5);
+        fancySpruceBlock = new FancyWoodBlock(6);
 
         //stairs
         for(int i=0; i < 16; i++) {
@@ -64,7 +79,14 @@ public final class ModBlocks {
             GameRegistry.registerBlock(coloredobsidian_stairs = new ModBlockStairs("coloredobsidian_stairs" + i , ModBlocks.coloredobsidianBlock, i), "coloredobsidian_stairs" + i);
             GameRegistry.registerBlock(coloredemerald_stairs = new ModBlockStairs("coloredemerald_stairs" + i , ModBlocks.coloredemeraldBlock, i), "coloredemerald_stairs" + i);
             GameRegistry.registerBlock(fancybrick_stairs = new ModBlockStairs("fancybrick_stairs" + i , ModBlocks.fancyBrickBlock, i), "fancybrick_stairs" + i);
-            GameRegistry.registerBlock(fancywood_stairs = new ModBlockStairs("fancywood_stairs" + i , ModBlocks.fancyWoodBlock, i), "fancywood_stairs" + i);
+            /*
+            GameRegistry.registerBlock(fancyAcacia_stairs = new ModBlockStairs("fancyOak_stairs" + i , ModBlocks.fancyAcaciaBlock, i), "fancyAcacia_stairs" + i);
+            GameRegistry.registerBlock(fancyBirch_stairs = new ModBlockStairs("fancyOak_stairs" + i , ModBlocks.fancyBirchBlock, i), "fancyBirch_stairs" + i);
+            GameRegistry.registerBlock(fancyDarkOak_stairs = new ModBlockStairs("fancyOak_stairs" + i , ModBlocks.fancyDarkOakBlock, i), "fancyDarkOak_stairs" + i);
+            GameRegistry.registerBlock(fancyJungle_stairs = new ModBlockStairs("fancyOak_stairs" + i , ModBlocks.fancyJungleBlock, i), "fancyJungle_stairs" + i);
+            GameRegistry.registerBlock(fancyOak_stairs = new ModBlockStairs("fancyOak_stairs" + i , ModBlocks.fancyOakBlock, i), "fancyOak_stairs" + i);
+            GameRegistry.registerBlock(fancySpruce_stairs = new ModBlockStairs("fancyOak_stairs" + i , ModBlocks.fancySpruceBlock, i), "fancySpruce_stairs" + i);
+            */
         }
     }
 }

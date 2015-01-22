@@ -5,6 +5,7 @@ import com.totallyminecraft.superblocks.blocks.ModBlockStairs;
 import com.totallyminecraft.superblocks.blocks.ModBlocks;
 import com.totallyminecraft.superblocks.items.ModItems;
 import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
 import net.minecraft.item.Item;
@@ -32,8 +33,13 @@ public class ModOnXEvent {
             event.player.addStat(ModAchievements.abittoasty, 1);
         }
     }
-
-    public static void init(){
+    @SubscribeEvent
+    public void WhenICraftSecretWood(PlayerEvent.ItemCraftedEvent event) {
+        if (event.crafting.getItem().equals((new ItemStack(ModBlocks.fancyOakBlock, 15)))) {
+            event.player.addStat(ModAchievements.secretwood, 1);
+        }
+    }
+        public static void init(){
 
         FMLCommonHandler.instance().bus().register( new ModOnXEvent());
 

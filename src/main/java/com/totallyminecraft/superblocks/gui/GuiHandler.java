@@ -23,18 +23,21 @@ public class GuiHandler implements IGuiHandler{
                 default:
                     return null;
             }
+        }else{
+            switch(ID){
+                case WoodWorkerGui.ID:
+                    return ID == WoodWorkerGui.ID && world.getBlock(x,y,z) == ModBlocks.woodWorker ? new WoodWorkerContainer(player.inventory, world, x, y, z): null;
+            }
         }
-        if(ID == WoodWorkerGui.ID){
-            return ID == WoodWorkerGui.ID && world.getBlock(x,y,z) == ModBlocks.woodWorker ? new WoodWorkerContainer(player.inventory, world, x, y, z): null;
-        }
+
         return null;
     }
 
 
-    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z){
-        TileEntity entity = world.getTileEntity(x,y,z);
-        if(entity != null){
-            switch(ID){
+    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+        TileEntity entity = world.getTileEntity(x, y, z);
+        if (entity != null) {
+            switch (ID) {
                 case ModTileEntities.BrickFurnaceID:
                     if (entity instanceof BrickFurnaceEntity) {
                         return new BrickFurnaceGui(player.inventory, (BrickFurnaceEntity) entity);
@@ -43,9 +46,11 @@ public class GuiHandler implements IGuiHandler{
                 default:
                     return null;
             }
-        }
-        if(ID == WoodWorkerGui.ID){
-            return ID == WoodWorkerGui.ID && world.getBlock(x,y,z) == ModBlocks.woodWorker ? new WoodWorkerGui(player.inventory, world, x, y, z): null;
+        } else {
+            switch (ID) {
+                case WoodWorkerGui.ID:
+                    return ID == WoodWorkerGui.ID && world.getBlock(x, y, z) == ModBlocks.woodWorker ? new WoodWorkerGui(player.inventory, world, x, y, z) : null;
+            }
         }
         return null;
     }

@@ -54,12 +54,7 @@ public class Crafting {
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.foilItem), new Object[]{ModItems.ironscrapItem});
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.lithiumBatteryItem), new Object[]{ModItems.foilItem, ModItems.lithiumCellStackItem});
 
-
-
         GameRegistry.addSmelting(Items.baked_potato, new ItemStack(ModItems.overbakedpotatoItem), 0.0F);
-
-
-
 
     }
 }

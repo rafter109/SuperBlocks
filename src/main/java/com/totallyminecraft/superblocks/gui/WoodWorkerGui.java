@@ -14,11 +14,11 @@ public class WoodWorkerGui extends GuiContainer{
     public WoodWorkerGui(InventoryPlayer invPlayer, World world ,int x, int y, int z){
         super(new WoodWorkerContainer(invPlayer, world, x, y, z));
         xSize = 176;
-        ySize = 166;
+        ySize = 181;
     }
     public void onGuiClosed(){ super.onGuiClosed(); }
     public void drawGuiContainerForegroundLayer(int par1, int par2){
-        fontRendererObj.drawString(StatCollector.translateToLocal("Wood Worker"),30,5,0x000000);
+        fontRendererObj.drawString("Wood Worker",100,15,0x000000);
     }
     public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3){
         mc.getTextureManager().bindTexture(backgroundimage);

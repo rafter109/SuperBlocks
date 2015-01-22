@@ -32,7 +32,7 @@ public class WoodWorkerCraftingManager
     {
         //logs to planks
         for (int i=0; i < 3; i++){
-            this.addRecipe(new ItemStack(Blocks.planks, 4, i), new Object[]{"#", '#', new ItemStack(Blocks.log, 1, i)});
+            this.addShapelessRecipe(new ItemStack(Blocks.planks, 4, i), new Object[]{"#", '#', new ItemStack(Blocks.log, 1, i)});
         }
         //planks to slabs
         for (int i=0; i < 5; i++){
@@ -41,7 +41,7 @@ public class WoodWorkerCraftingManager
         this.addRecipe(new ItemStack(Blocks.planks, 4, 4), new Object[]{"#", '#', new ItemStack(Blocks.log2, 1, 0)});
         this.addRecipe(new ItemStack(Blocks.planks, 4, 5), new Object[]{"#", '#', new ItemStack(Blocks.log2, 1, 1)});
         //planks to sticks
-        this.addRecipe(new ItemStack(Items.stick, 4), new Object[]{"#", "#", '#', Blocks.planks});
+        this.addShapelessRecipe(new ItemStack(Items.stick, 4), new Object[]{"#", "#", '#', Blocks.planks});
         //Stairs
         this.addRecipe(new ItemStack(Blocks.oak_stairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 0)});
         this.addRecipe(new ItemStack(Blocks.birch_stairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 2)});
@@ -49,7 +49,113 @@ public class WoodWorkerCraftingManager
         this.addRecipe(new ItemStack(Blocks.jungle_stairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 3)});
         this.addRecipe(new ItemStack(Blocks.acacia_stairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 4)});
         this.addRecipe(new ItemStack(Blocks.dark_oak_stairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 5)});
-        /**TODO: ADD RECIPIES HERE*/
+        //Fancy OAK Wood
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 6, 0), new Object[]{" ##","## "," ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 9, 1), new Object[]{" ###","### "," ###",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 6, 2), new Object[]{"###","   ","###",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 18, 3), new Object[]{"## ##","## ##","#####","#####",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 16, 4), new Object[]{"## ##","## ##","     ","## ##","## ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 13, 5), new Object[]{"# # #"," # # ","# # #"," # # ","# # #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 21, 6), new Object[]{"#####","## ##","# # #","## ##","#####",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 12, 7), new Object[]{"  #  "," ### ","## ##"," ### ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 8, 8), new Object[]{"  #  "," # # ","#   #"," # # ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 16, 9), new Object[]{" # # ","#####"," # # ","#####"," # # ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 5, 10), new Object[]{" # ","###"," # ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 12, 11), new Object[]{"   # ","#### "," # # "," ####"," #   ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 7, 12), new Object[]{"## ","###"," ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 7, 13), new Object[]{"#   #"," #   ","  #  ","   # ","#   #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 9, 14), new Object[]{"  #  "," # # "," # # ","#   #","#   #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyOakBlock, 6, 15), new Object[]{" ### ","   # ","  #  ","     ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+
+        //Fancy DarkOak Wood
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 6, 0), new Object[]{" ##","## "," ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 9, 1), new Object[]{" ###","### "," ###",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 6, 2), new Object[]{"###","   ","###",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 18, 3), new Object[]{"## ##","## ##","#####","#####",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 16, 4), new Object[]{"## ##","## ##","     ","## ##","## ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 13, 5), new Object[]{"# # #"," # # ","# # #"," # # ","# # #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 21, 6), new Object[]{"#####","## ##","# # #","## ##","#####",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 12, 7), new Object[]{"  #  "," ### ","## ##"," ### ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 8, 8), new Object[]{"  #  "," # # ","#   #"," # # ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 16, 9), new Object[]{" # # ","#####"," # # ","#####"," # # ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 5, 10), new Object[]{" # ","###"," # ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 12, 11), new Object[]{"   # ","#### "," # # "," ####"," #   ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 7, 12), new Object[]{"## ","###"," ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 7, 13), new Object[]{"#   #"," #   ","  #  ","   # ","#   #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 9, 14), new Object[]{"  #  "," # # "," # # ","#   #","#   #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyDarkOakBlock, 6, 15), new Object[]{" ### ","   # ","  #  ","     ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+
+        //Fancy Acacia Wood
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 6, 0), new Object[]{" ##","## "," ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 9, 1), new Object[]{" ###","### "," ###",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 6, 2), new Object[]{"###","   ","###",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 18, 3), new Object[]{"## ##","## ##","#####","#####",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 16, 4), new Object[]{"## ##","## ##","     ","## ##","## ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 13, 5), new Object[]{"# # #"," # # ","# # #"," # # ","# # #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 21, 6), new Object[]{"#####","## ##","# # #","## ##","#####",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 12, 7), new Object[]{"  #  "," ### ","## ##"," ### ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 8, 8), new Object[]{"  #  "," # # ","#   #"," # # ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 16, 9), new Object[]{" # # ","#####"," # # ","#####"," # # ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 5, 10), new Object[]{" # ","###"," # ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 12, 11), new Object[]{"   # ","#### "," # # "," ####"," #   ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 7, 12), new Object[]{"## ","###"," ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 7, 13), new Object[]{"#   #"," #   ","  #  ","   # ","#   #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 9, 14), new Object[]{"  #  "," # # "," # # ","#   #","#   #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyAcaciaBlock, 6, 15), new Object[]{" ### ","   # ","  #  ","     ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+
+        //Fancy Jungle Wood
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 6, 0), new Object[]{" ##","## "," ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 9, 1), new Object[]{" ###","### "," ###",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 6, 2), new Object[]{"###","   ","###",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 18, 3), new Object[]{"## ##","## ##","#####","#####",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 16, 4), new Object[]{"## ##","## ##","     ","## ##","## ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 13, 5), new Object[]{"# # #"," # # ","# # #"," # # ","# # #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 21, 6), new Object[]{"#####","## ##","# # #","## ##","#####",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 12, 7), new Object[]{"  #  "," ### ","## ##"," ### ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 8, 8), new Object[]{"  #  "," # # ","#   #"," # # ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 16, 9), new Object[]{" # # ","#####"," # # ","#####"," # # ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 5, 10), new Object[]{" # ","###"," # ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 12, 11), new Object[]{"   # ","#### "," # # "," ####"," #   ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 7, 12), new Object[]{"## ","###"," ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 7, 13), new Object[]{"#   #"," #   ","  #  ","   # ","#   #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 9, 14), new Object[]{"  #  "," # # "," # # ","#   #","#   #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyJungleBlock, 6, 15), new Object[]{" ### ","   # ","  #  ","     ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+
+        //Fancy Birch Wood
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 6, 0), new Object[]{" ##","## "," ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 9, 1), new Object[]{" ###","### "," ###",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 6, 2), new Object[]{"###","   ","###",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 18, 3), new Object[]{"## ##","## ##","#####","#####",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 16, 4), new Object[]{"## ##","## ##","     ","## ##","## ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 13, 5), new Object[]{"# # #"," # # ","# # #"," # # ","# # #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 21, 6), new Object[]{"#####","## ##","# # #","## ##","#####",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 12, 7), new Object[]{"  #  "," ### ","## ##"," ### ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 8, 8), new Object[]{"  #  "," # # ","#   #"," # # ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 16, 9), new Object[]{" # # ","#####"," # # ","#####"," # # ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 5, 10), new Object[]{" # ","###"," # ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 12, 11), new Object[]{"   # ","#### "," # # "," ####"," #   ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 7, 12), new Object[]{"## ","###"," ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 7, 13), new Object[]{"#   #"," #   ","  #  ","   # ","#   #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 9, 14), new Object[]{"  #  "," # # "," # # ","#   #","#   #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancyBirchBlock, 6, 15), new Object[]{" ### ","   # ","  #  ","     ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+
+        //Fancy Spruce Wood
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 6, 0), new Object[]{" ##","## "," ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 9, 1), new Object[]{" ###","### "," ###",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 6, 2), new Object[]{"###","   ","###",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 18, 3), new Object[]{"## ##","## ##","#####","#####",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 16, 4), new Object[]{"## ##","## ##","     ","## ##","## ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 13, 5), new Object[]{"# # #"," # # ","# # #"," # # ","# # #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 21, 6), new Object[]{"#####","## ##","# # #","## ##","#####",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 12, 7), new Object[]{"  #  "," ### ","## ##"," ### ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 8, 8), new Object[]{"  #  "," # # ","#   #"," # # ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 16, 9), new Object[]{" # # ","#####"," # # ","#####"," # # ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 5, 10), new Object[]{" # ","###"," # ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 12, 11), new Object[]{"   # ","#### "," # # "," ####"," #   ",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 7, 12), new Object[]{"## ","###"," ##",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 7, 13), new Object[]{"#   #"," #   ","  #  ","   # ","#   #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 9, 14), new Object[]{"  #  "," # # "," # # ","#   #","#   #",'#', new ItemStack(Blocks.planks, 1, 1)});
+        this.addRecipe(new ItemStack(ModBlocks.fancySpruceBlock, 6, 15), new Object[]{" ### ","   # ","  #  ","     ","  #  ",'#', new ItemStack(Blocks.planks, 1, 1)});
 
         Collections.sort(this.recipes, new WoodWorkerRecipeSorter(this));
     }
