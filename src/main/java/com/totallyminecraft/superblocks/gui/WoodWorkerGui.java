@@ -2,10 +2,8 @@ package com.totallyminecraft.superblocks.gui;
 
 import com.totallyminecraft.superblocks.lib.Constants;
 import net.minecraft.client.gui.inventory.GuiContainer;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
 public class WoodWorkerGui extends GuiContainer{
@@ -18,7 +16,7 @@ public class WoodWorkerGui extends GuiContainer{
     }
     public void onGuiClosed(){ super.onGuiClosed(); }
     public void drawGuiContainerForegroundLayer(int par1, int par2){
-        fontRendererObj.drawString("Wood Worker",1001,5,0x000000);
+        fontRendererObj.drawString("Wood Worker",100,15,0x000000);
     }
     public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3){
         mc.getTextureManager().bindTexture(backgroundimage);

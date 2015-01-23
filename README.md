@@ -6,11 +6,3 @@ Want a current list of screenshots? Click [HERE](http://mc3.totallyminecraft.com
 
 #WARNING:
 **_All aspects of this mod are subject to change at any given time!_**
-
-#TODO:
-* Add Rotation to:
-  Batery Charger,
-  Brick Furnace,
-* Add Gui to Quiver
-* Create Brick Binder w/ Recipies
-* Add In-Game Documentation (Book?)

@@ -3,6 +3,7 @@ package com.totallyminecraft.superblocks;
 
 
 import cpw.mods.fml.common.FMLCommonHandler;
+import net.minecraftforge.common.config.Configuration;
 
 public class SuperBlocksConfig {
 
@@ -19,7 +20,7 @@ public class SuperBlocksConfig {
 
         FMLCommonHandler.instance().bus().register(SuperBlocks.instance);
 
-        final String TOGGLE = SuperBlocks.superblocksconfig.CATEGORY_GENERAL + SuperBlocks.superblocksconfig.CATEGORY_SPLITTER + "Toggles";
+        final String TOGGLE = Configuration.CATEGORY_GENERAL + Configuration.CATEGORY_SPLITTER + "Toggles";
         SuperBlocks.superblocksconfig.addCustomCategoryComment(TOGGLE, "Enable or dissable parts of the mod");
 
         genLithiumOre = SuperBlocks.superblocksconfig.get(TOGGLE, genLithiumOreName, genLithiumOreDefault).getBoolean(genLithiumOreDefault);

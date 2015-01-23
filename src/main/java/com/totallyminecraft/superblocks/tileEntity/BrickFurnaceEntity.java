@@ -201,7 +201,7 @@ public class BrickFurnaceEntity extends TileEntity implements IInventory {
         NBTTagList list = nbt.getTagList("Items", 10);
         slots = new ItemStack[getSizeInventory()];
         for(int i = 0; i < list.tagCount(); i++) {
-            NBTTagCompound compound = (NBTTagCompound) list.getCompoundTagAt(i);
+            NBTTagCompound compound = list.getCompoundTagAt(i);
             byte b = compound.getByte("Slot");
             if(b >= 0 && b < slots.length) {
                 slots[b] = ItemStack.loadItemStackFromNBT(compound);
