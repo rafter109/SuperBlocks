@@ -14,7 +14,7 @@ public class GuideBookGui extends GuiContainer{
     }
     public void onGuiClosed(){ super.onGuiClosed(); }
     public void drawGuiContainerForegroundLayer(int par1, int par2){
-        fontRendererObj.drawString("Wood Worker",100,15,0x000000);
+
     }
     public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3){
         mc.getTextureManager().bindTexture(backgroundimage);
