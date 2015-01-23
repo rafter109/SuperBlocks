@@ -17,6 +17,7 @@ public final class ModItems {
     public static Item lithiumCellStackItem;
     public static Item lithiumBatteryItem;
     public static Item foilItem;
+    public static Item guideBookItem;
 
     public static void init(){
 
@@ -34,6 +35,7 @@ public final class ModItems {
         lithiumCellStackItem = new LithiumCellStackItem();
         lithiumBatteryItem = new LithiumBatteryItem();
         foilItem = new FoilItem();
+        guideBookItem = new GuideBookItem();
 
     }
 }
