@@ -2,7 +2,9 @@ package com.totallyminecraft.superblocks.items;
 
 
 import com.totallyminecraft.superblocks.ModTabs;
+import com.totallyminecraft.superblocks.gui.GuideBookGui;
 import com.totallyminecraft.superblocks.lib.Constants;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -25,7 +27,7 @@ public class GuideBookItem extends Item{
     @Override
     public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player){
         if(world.isRemote){
-
+            FMLCommonHandler.instance().showGuiScreen(new GuideBookGui());
         }
         return itemStack;
     }
