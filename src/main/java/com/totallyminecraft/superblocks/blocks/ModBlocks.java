@@ -52,5 +52,6 @@ public final class ModBlocks {
         fancyJungleBlock = new FancyWoodBlock(4);
         fancyOakBlock = new FancyWoodBlock(5);
         fancySpruceBlock = new FancyWoodBlock(6);
+        
     }
 }
