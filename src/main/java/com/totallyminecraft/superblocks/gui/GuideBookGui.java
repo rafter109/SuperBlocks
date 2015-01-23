@@ -2,16 +2,14 @@ package com.totallyminecraft.superblocks.gui;
 
 import com.totallyminecraft.superblocks.lib.Constants;
 import net.minecraft.client.gui.inventory.GuiContainer;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
-public class WoodWorkerGui extends GuiContainer{
-    public static final int ID = 1;
+public class GuideBookGui extends GuiContainer{
+    public static final int ID = 3;
     public static final ResourceLocation backgroundimage = new ResourceLocation(Constants.MODID, "textures/gui/woodWorkerGui.png");
-    public WoodWorkerGui(InventoryPlayer invPlayer, World world ,int x, int y, int z){
+    public GuideBookGui(InventoryPlayer invPlayer, World world, int x, int y, int z){
         super(new WoodWorkerContainer(invPlayer, world, x, y, z));
         xSize = 176;
         ySize = 181;
