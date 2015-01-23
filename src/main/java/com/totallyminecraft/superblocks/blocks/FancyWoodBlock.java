@@ -30,28 +30,6 @@ public class FancyWoodBlock extends Block{
         else if(type == 4) name = "fancyJungleBlock";
         else if(type == 5) name = "fancyOakBlock";
         else if(type == 6) name = "fancySpruceBlock";
-        else name = "err_block";
-        /*switch(type){
-            case 1:
-                name = "fancyAcaciaBlock";
-                System.out.println(name + " registered");
-            case 2:
-                name = "fancyBirchBlock";
-                System.out.println(name + " registered");
-            case 3:
-                name = "fancyDarkOakBlock";
-                System.out.println(name + " registered");
-            case 4:
-                name = "fancyJungleBlock";
-                System.out.println(name + " registered");
-            case 5:
-                name = "fancyOakBlock";
-                System.out.println(name + " registered");
-            case 6:
-                name = "fancySpruceBlock";
-                System.out.println(name + " registered");
-        }*/
-        System.out.println(name + " registered");
         setBlockName(Constants.MODID + "_" + name);
         setCreativeTab(ModTabs.tabSuperBlocks);
         GameRegistry.registerBlock(this, ItemBlockMultiBlock.class, name);

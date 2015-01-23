@@ -8,16 +8,9 @@ Want a current list of screenshots? Click [HERE](http://mc3.totallyminecraft.com
 **_All aspects of this mod are subject to change at any given time!_**
 
 #TODO:
-* ~~Add Crafting to Wood Worker~~
-* ~~Add Fancy Wood~~
-* ~~Give Fancy Wood Recipies in Wood Worker~~
-* ~~Add Functionality to Brick Furnace~~
 * Add Rotation to:
   Batery Charger,
-  Wood Worker,
   Brick Furnace,
-  Fancy Bricks,
-  Fancy Wood
 * Add Gui to Quiver
 * Create Brick Binder w/ Recipies
 * Add In-Game Documentation (Book?)

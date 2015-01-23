@@ -29,24 +29,6 @@ public final class ModBlocks {
     public static Block fancyOakBlock;
     public static Block fancySpruceBlock;
 
-    //stairs
-    public static Block plastic_stairs;
-    public static Block edgedplastic_stairs;
-    public static Block coloredbrick_stairs;
-    public static Block coloredobsidian_stairs;
-    public static Block coloredemerald_stairs;
-    public static Block fancybrick_stairs;
-
-    public static Block fancyAcacia_stairs;
-    public static Block fancyBirch_stairs;
-    public static Block fancyDarkOak_stairs;
-    public static Block fancyJungle_stairs;
-    public static Block fancyOak_stairs;
-    public static Block fancySpruce_stairs;
-
-
-
-
     public static void init(){
         plasticBlock = new PlasticBlock();
         edgedplasticBlock = new EdgedPlasticBlock();
@@ -70,23 +52,5 @@ public final class ModBlocks {
         fancyJungleBlock = new FancyWoodBlock(4);
         fancyOakBlock = new FancyWoodBlock(5);
         fancySpruceBlock = new FancyWoodBlock(6);
-
-        //stairs
-        for(int i=0; i < 16; i++) {
-            GameRegistry.registerBlock(plastic_stairs = new ModBlockStairs("plastic_stairs" + i , ModBlocks.plasticBlock, i), "plastic_stairs" + i);
-            GameRegistry.registerBlock(edgedplastic_stairs = new ModBlockStairs("edgedplastic_stairs" + i , ModBlocks.edgedplasticBlock, i), "edgedplastic_stairs" + i);
-            GameRegistry.registerBlock(coloredbrick_stairs = new ModBlockStairs("coloredbrick_stairs" + i , ModBlocks.coloredBrickBlock, i), "coloredbrick_stairs" + i);
-            GameRegistry.registerBlock(coloredobsidian_stairs = new ModBlockStairs("coloredobsidian_stairs" + i , ModBlocks.coloredobsidianBlock, i), "coloredobsidian_stairs" + i);
-            GameRegistry.registerBlock(coloredemerald_stairs = new ModBlockStairs("coloredemerald_stairs" + i , ModBlocks.coloredemeraldBlock, i), "coloredemerald_stairs" + i);
-            GameRegistry.registerBlock(fancybrick_stairs = new ModBlockStairs("fancybrick_stairs" + i , ModBlocks.fancyBrickBlock, i), "fancybrick_stairs" + i);
-            /*
-            GameRegistry.registerBlock(fancyAcacia_stairs = new ModBlockStairs("fancyOak_stairs" + i , ModBlocks.fancyAcaciaBlock, i), "fancyAcacia_stairs" + i);
-            GameRegistry.registerBlock(fancyBirch_stairs = new ModBlockStairs("fancyOak_stairs" + i , ModBlocks.fancyBirchBlock, i), "fancyBirch_stairs" + i);
-            GameRegistry.registerBlock(fancyDarkOak_stairs = new ModBlockStairs("fancyOak_stairs" + i , ModBlocks.fancyDarkOakBlock, i), "fancyDarkOak_stairs" + i);
-            GameRegistry.registerBlock(fancyJungle_stairs = new ModBlockStairs("fancyOak_stairs" + i , ModBlocks.fancyJungleBlock, i), "fancyJungle_stairs" + i);
-            GameRegistry.registerBlock(fancyOak_stairs = new ModBlockStairs("fancyOak_stairs" + i , ModBlocks.fancyOakBlock, i), "fancyOak_stairs" + i);
-            GameRegistry.registerBlock(fancySpruce_stairs = new ModBlockStairs("fancyOak_stairs" + i , ModBlocks.fancySpruceBlock, i), "fancySpruce_stairs" + i);
-            */
-        }
     }
 }
