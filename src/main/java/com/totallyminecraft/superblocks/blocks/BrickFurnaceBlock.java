@@ -39,7 +39,7 @@ public class BrickFurnaceBlock extends BlockContainer{
         }
         else { 
             name = "BrickFurnace_Idle";
-            setCreativeTab(ModTabs.tabSuperBlocks);
+            setCreativeTab(ModTabs.tabSuperBlocksMachine);
         }
         setBlockName(Constants.MODID + "_" + name);
         GameRegistry.registerBlock(this, ItemBlockMultiBlock.class, name);

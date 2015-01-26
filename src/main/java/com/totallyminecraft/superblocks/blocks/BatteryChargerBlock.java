@@ -4,11 +4,8 @@ import com.totallyminecraft.superblocks.ModTabs;
 import com.totallyminecraft.superblocks.lib.Constants;
 import com.totallyminecraft.superblocks.tileEntity.TileEntityBatteryChargerBlock;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -25,7 +22,7 @@ public class BatteryChargerBlock extends BlockContainer {
 
     public BatteryChargerBlock(){
         super(Material.iron);
-        this.setCreativeTab(ModTabs.tabSuperBlocks);
+        this.setCreativeTab(ModTabs.tabSuperBlocksMachine);
         this.setBlockName(Constants.MODID + "_" + name);
         setBlockBounds(0.1875F, 0F, 0.375F, 0.8125F, 0.25F, 0.875F);
         GameRegistry.registerBlock(this, name);

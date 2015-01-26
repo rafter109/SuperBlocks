@@ -24,4 +24,12 @@ public class ModTabs {
             return ModItems.overbakedpotatoItem;
         }
     };
+
+    public static CreativeTabs tabSuperBlocksMachine = new CreativeTabs("superblocksbachinesTab") {
+        @Override
+        @SideOnly(Side.CLIENT)
+        public Item getTabIconItem() {
+            return Item.getItemFromBlock(ModBlocks.machinecoreBlock);
+        }
+    };
 }

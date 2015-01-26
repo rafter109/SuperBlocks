@@ -20,7 +20,7 @@ public class BrickBinderBlock extends Block {
         super(Material.wood);
         name = "BrickBinder";
         setBlockName(Constants.MODID + "_" + name);
-        setCreativeTab(ModTabs.tabSuperBlocks);
+        setCreativeTab(ModTabs.tabSuperBlocksMachine);
         GameRegistry.registerBlock(this, ItemBlockMultiBlock.class, name);
         setResistance(30f);
         setHardness(1.5f);
