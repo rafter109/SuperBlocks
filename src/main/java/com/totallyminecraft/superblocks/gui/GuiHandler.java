@@ -26,7 +26,9 @@ public class GuiHandler implements IGuiHandler{
         }else{
             switch(ID){
                 case WoodWorkerGui.ID:
-                    return ID == WoodWorkerGui.ID && world.getBlock(x,y,z) == ModBlocks.woodWorker ? new WoodWorkerContainer(player.inventory, world, x, y, z): null;
+                    return ID == WoodWorkerGui.ID && world.getBlock(x,y,z) == ModBlocks.woodWorker ? new WoodWorkerContainer(player.inventory, world): null;
+                case BrickBinderGui.ID:
+                    return ID == BrickBinderGui.ID && world.getBlock(x,y,z) == ModBlocks.brickBinder ? new BrickBinderContainer(player.inventory, world): null;
             }
         }
 
@@ -49,7 +51,9 @@ public class GuiHandler implements IGuiHandler{
         } else {
             switch (ID) {
                 case WoodWorkerGui.ID:
-                    return ID == WoodWorkerGui.ID && world.getBlock(x, y, z) == ModBlocks.woodWorker ? new WoodWorkerGui(player.inventory, world, x, y, z) : null;
+                    return ID == WoodWorkerGui.ID && world.getBlock(x, y, z) == ModBlocks.woodWorker ? new WoodWorkerGui(player.inventory, world) : null;
+                case BrickBinderGui.ID:
+                    return ID == BrickBinderGui.ID && world.getBlock(x, y, z) == ModBlocks.brickBinder ? new BrickBinderGui(player.inventory, world) : null;
             }
         }
         return null;

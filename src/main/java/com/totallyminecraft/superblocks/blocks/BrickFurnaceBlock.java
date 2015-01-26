@@ -215,10 +215,8 @@ public class BrickFurnaceBlock extends BlockContainer{
                 return icons[0];
             case 1:
                 return icons[0];
-            case 2:
-                return icons[2];
             default: {
-                return icons[3];
+                return icons[1];
             }
         }
     }

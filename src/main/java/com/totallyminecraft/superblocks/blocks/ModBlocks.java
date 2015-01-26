@@ -1,6 +1,5 @@
 package com.totallyminecraft.superblocks.blocks;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 
 
@@ -17,6 +16,7 @@ public final class ModBlocks {
     public static Block coloredglowstoneBlock;
     public static Block constructionBlocks;
     public static Block woodWorker;
+    public static Block brickBinder;
     public static Block brickFurnaceIdle;
     public static Block brickFurnaceActive;
     public static Block machinecoreBlock;
@@ -41,6 +41,7 @@ public final class ModBlocks {
         coloredglowstoneBlock = new ColoredGlowstoneBlock();
         constructionBlocks = new ConstructionBlock();
         woodWorker = new WoodWorkerBlock();
+        brickBinder = new BrickBinderBlock();
         brickFurnaceIdle = new BrickFurnaceBlock(false);
         brickFurnaceActive = new BrickFurnaceBlock(true);
         machinecoreBlock = new MachineCoreBlock();

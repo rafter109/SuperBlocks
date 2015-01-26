@@ -6,17 +6,17 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
-public class WoodWorkerGui extends GuiContainer{
-    public static final int ID = 1;
-    public static final ResourceLocation backgroundimage = new ResourceLocation(Constants.MODID, "textures/gui/woodWorkerGui.png");
-    public WoodWorkerGui(InventoryPlayer invPlayer, World world){
-        super(new WoodWorkerContainer(invPlayer, world));
+public class BrickBinderGui extends GuiContainer{
+    public static final int ID = 4;
+    public static final ResourceLocation backgroundimage = new ResourceLocation(Constants.MODID, "textures/gui/brickBinderGui.png");
+    public BrickBinderGui(InventoryPlayer invPlayer, World world){
+        super(new BrickBinderContainer(invPlayer, world));
         xSize = 176;
         ySize = 181;
     }
     public void onGuiClosed(){ super.onGuiClosed(); }
     public void drawGuiContainerForegroundLayer(int par1, int par2){
-        fontRendererObj.drawString("Wood Worker",100,15,0x000000);
+        fontRendererObj.drawString("Brick Binder",100,15,0xFFFFFF);
     }
     public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3){
         mc.getTextureManager().bindTexture(backgroundimage);
