@@ -25,10 +25,17 @@ public class Crafting {
 
             GameRegistry.addShapelessRecipe(new ItemStack(Items.emerald, 9), new ItemStack(ModBlocks.coloredemeraldBlock,1,i));
 
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredobsidianBlock, 8, i), "###", "#*#", "###", '#', new ItemStack(ModBlocks.coloredobsidianBlock, 1, 0), '*', new ItemStack(Items.dye, 1, j));
+            GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.constructionBlocks, 1, i), new ItemStack(ModBlocks.constructionBlocks, 1, j));
 
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredBrickBlock, 8, i), "###", "#*#", "###", '#', new ItemStack(ModBlocks.coloredBrickBlock, 1, 0), '*', new ItemStack(Items.dye, 1, j));
+            GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.fancyBrickBlock, 1, i), new ItemStack(ModBlocks.fancyBrickBlock, 1, j));
 
+
+            if(i>0) {
+                GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredBrickBlock, 8, i), "###", "#*#", "###", '#', new ItemStack(ModBlocks.coloredBrickBlock, 1, 0), '*', new ItemStack(Items.dye, 1, j));
+                GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredobsidianBlock, 8, i), "###", "#*#", "###", '#', new ItemStack(ModBlocks.coloredobsidianBlock, 1, 0), '*', new ItemStack(Items.dye, 1, j));
+                GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredglowstoneBlock, 8, i), "###", "#*#", "###", '#', new ItemStack(ModBlocks.coloredglowstoneBlock, 1, 0), '*', new ItemStack(Items.dye, 1, j));
+
+            }
         }
 
         //used for meta with no dye
@@ -52,7 +59,18 @@ public class Crafting {
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.lithiumCellStackItem), ModItems.lithiumCellItem, ModItems.lithiumCellItem, ModItems.lithiumCellItem, ModItems.lithiumCellItem);
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.foilItem, 2), ModItems.ironscrapItem);
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.lithiumBatteryItem), ModItems.foilItem, ModItems.lithiumCellStackItem);
-        GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredBrickBlock,8, 0), "###", "#*#", "###", '#', Blocks.brick_block, '*', new ItemStack(ModItems.bleachbucketItem));
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredBrickBlock, 8, 0), "###", "#*#", "###", '#', Blocks.brick_block, '*', new ItemStack(ModItems.bleachbucketItem));
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredglowstoneBlock,8, 0), "###", "#*#", "###", '#', Blocks.glowstone, '*', new ItemStack(ModItems.bleachbucketItem));
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.constructionBlocks,8, 0), "###", "# #", "###", '#', Blocks.cobblestone);
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.fancyBrickBlock,8, 0), "###", "# #", "###", '#', Blocks.brick_block);
+        GameRegistry.addRecipe(new ItemStack(ModItems.jarItem,2), " * ", "# #", "###", '#', Blocks.glass_pane, '*',Blocks.planks);
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.guideBookItem), Items.book, ModItems.overbakedpotatoItem);
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.brickBinder), "###", "PCP", "#P#", '#', Blocks.brick_block, 'P', Blocks.piston, 'C', ModBlocks.machinecoreBlock);
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.brickFurnaceIdle), "###", "#C#", "###", '#', Blocks.brick_block,'C', ModItems.ironscrapItem);
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.lithiumnuggetItem, 8), ModItems.suspendedlithiumItem);
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.lithiumCellItem), ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem);
+
+
 
 
         //smelting
