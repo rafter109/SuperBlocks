@@ -1,5 +1,6 @@
 itemGroup.superblocksTab=SuperBlocks
 itemGroup.superblocksitemsTab=SuperBlocks Items
+itemGroup.superblocksmachinesTab=SuperBlocks Machines
 
 achievement.superblocks.burnbaby=Burn Baby Burn
 achievement.superblocks.burnbaby.desc=Craft A Cutting Torch
@@ -22,10 +23,19 @@ item.superblocks_lithiumnuggetItem.name=Lithium Nugget
 item.superblocks_aluminumingotItem.name=Aluminum Ingot
 item.superblocks_jarItem.name=Jar
 item.superblocks_suspendedlithiumItem.name=Suspended Lithium
+item.superblocks_lithiumCellItem.name=Lithium Cell
+item.superblocks_lithiumCellStackItem.name=Stack of Lithium Cells
+item.superblocks_lithiumBatteryItem.name=Lithium Battery
+item.superblocks_foilItem.name=Foil
+item.superblocks_guideBookItem.name=Guide Book
 
-tile.superblocks_testBlock.name=Test Block
 tile.superblocks_rawplasticBlock.name=Raw Plastic
+tile.superblocks_batterychargerBlock.name=Battery Charger
 tile.superblocks_machinecoreBlock.name=Machine Core
+tile.superblocks_WoodWorker.0Meta.name=Wood Worker
+tile.superblocks_BrickFurnace_Idle.0Meta.name=Brick Furnace
+tile.superblocks_BrickFurnace_Active.0Meta.name=Brick Furnace
+tile.superblocks_BrickBinder.0Meta.name=Brick Binder
 
 tile.superblocks_plasticBlock.0Meta.name=White Plastic Block
 tile.superblocks_plasticBlock.1Meta.name=Orange Plastic Block
@@ -264,8 +274,6 @@ tile.superblocks_coloredemerald_stairs12.name=Stairs12
 tile.superblocks_coloredemerald_stairs13.name=Stairs13
 tile.superblocks_coloredemerald_stairs14.name=Stairs14
 tile.superblocks_coloredemerald_stairs15.name=Stairs15
-
-tile.superblocks_WoodWorker.0Meta.name=Wood Worker
 
 tile.superblocks_fancyOakBlock.0Meta.name=Segmented Oak Planks
 tile.superblocks_fancyOakBlock.1Meta.name=Aligned Oak Planks
