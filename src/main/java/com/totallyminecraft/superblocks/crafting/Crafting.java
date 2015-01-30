@@ -61,7 +61,7 @@ public class Crafting {
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.lithiumBatteryItem), ModItems.foilItem, ModItems.lithiumCellStackItem);
         GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredBrickBlock, 8, 0), "###", "#*#", "###", '#', Blocks.brick_block, '*', new ItemStack(ModItems.bleachbucketItem));
         GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredglowstoneBlock,8, 0), "###", "#*#", "###", '#', Blocks.glowstone, '*', new ItemStack(ModItems.bleachbucketItem));
-        GameRegistry.addRecipe(new ItemStack(ModBlocks.constructionBlocks,8, 0), "###", "# #", "###", '#', Blocks.cobblestone);
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.constructionBlocks,8, 0), "# #", "# #", "# #", '#', Blocks.cobblestone);
         GameRegistry.addRecipe(new ItemStack(ModBlocks.fancyBrickBlock,8, 0), "###", "# #", "###", '#', Blocks.brick_block);
         GameRegistry.addRecipe(new ItemStack(ModItems.jarItem,2), " * ", "# #", "###", '#', Blocks.glass_pane, '*',Blocks.planks);
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.guideBookItem), Items.book, ModItems.overbakedpotatoItem);
