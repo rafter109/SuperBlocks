@@ -18,10 +18,17 @@ public class Crafting {
         for (int i = 0; i < 16; i++) {
             j = 15-i;
             GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredrawplasticBlock, 16, j), "###", "#*#", "###", '#', ModBlocks.rawplasticBlock, '*', new ItemStack(Items.dye, 1, i));
+
             GameRegistry.addSmelting(new ItemStack(ModBlocks.coloredrawplasticBlock, 1, i), new ItemStack(ModBlocks.plasticBlock, 1, i), 0F);
+
             GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredemeraldBlock, 8, i), "###", "#*#", "###", '#', new ItemStack(ModBlocks.coloredemeraldBlock, 1, 0), '*', new ItemStack(Items.dye, 1, j));
+
             GameRegistry.addShapelessRecipe(new ItemStack(Items.emerald, 9), new ItemStack(ModBlocks.coloredemeraldBlock,1,i));
+
             GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredobsidianBlock, 8, i), "###", "#*#", "###", '#', new ItemStack(ModBlocks.coloredobsidianBlock, 1, 0), '*', new ItemStack(Items.dye, 1, j));
+
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredBrickBlock, 8, i), "###", "#*#", "###", '#', new ItemStack(ModBlocks.coloredBrickBlock, 1, 0), '*', new ItemStack(Items.dye, 1, j));
+
         }
 
         //used for meta with no dye
@@ -43,9 +50,13 @@ public class Crafting {
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.suspendedlithiumItem) , ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem,
                 ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem, ModItems.jarItem);
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.lithiumCellStackItem), ModItems.lithiumCellItem, ModItems.lithiumCellItem, ModItems.lithiumCellItem, ModItems.lithiumCellItem);
-        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.foilItem), ModItems.ironscrapItem);
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.foilItem, 2), ModItems.ironscrapItem);
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.lithiumBatteryItem), ModItems.foilItem, ModItems.lithiumCellStackItem);
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredBrickBlock,8, 0), "###", "#*#", "###", '#', Blocks.brick_block, '*', new ItemStack(ModItems.bleachbucketItem));
 
+
+        //smelting
         GameRegistry.addSmelting(Items.baked_potato, new ItemStack(ModItems.overbakedpotatoItem), 0.0F);
+        GameRegistry.addSmelting(Blocks.coal_block, new ItemStack(ModBlocks.rawplasticBlock, 8), 0.0F);
     }
 }
