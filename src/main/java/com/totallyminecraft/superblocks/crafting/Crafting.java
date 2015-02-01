@@ -11,6 +11,7 @@ import net.minecraft.item.ItemStack;
 public class Crafting {
 
     private static int j;
+    private static int k;
 
     public static void init() {
 
@@ -25,15 +26,15 @@ public class Crafting {
 
             GameRegistry.addShapelessRecipe(new ItemStack(Items.emerald, 9), new ItemStack(ModBlocks.coloredemeraldBlock,1,i));
 
-            GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.constructionBlocks, 1, i), new ItemStack(ModBlocks.constructionBlocks, 1, j));
 
-            GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.fancyBrickBlock, 1, i), new ItemStack(ModBlocks.fancyBrickBlock, 1, j));
 
 
             if(i>0) {
                 GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredBrickBlock, 8, i), "###", "#*#", "###", '#', new ItemStack(ModBlocks.coloredBrickBlock, 1, 0), '*', new ItemStack(Items.dye, 1, j));
                 GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredobsidianBlock, 8, i), "###", "#*#", "###", '#', new ItemStack(ModBlocks.coloredobsidianBlock, 1, 0), '*', new ItemStack(Items.dye, 1, j));
                 GameRegistry.addRecipe(new ItemStack(ModBlocks.coloredglowstoneBlock, 8, i), "###", "#*#", "###", '#', new ItemStack(ModBlocks.coloredglowstoneBlock, 1, 0), '*', new ItemStack(Items.dye, 1, j));
+                GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.constructionBlocks, 1, i), new ItemStack(ModBlocks.constructionBlocks, 1, (i - 1)));
+                GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.fancyBrickBlock, 1, i), new ItemStack(ModBlocks.fancyBrickBlock, 1, (i - 1)));
 
             }
         }
@@ -69,6 +70,8 @@ public class Crafting {
         GameRegistry.addRecipe(new ItemStack(ModBlocks.brickFurnaceIdle), "###", "#C#", "###", '#', Blocks.brick_block,'C', ModItems.ironscrapItem);
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.lithiumnuggetItem, 8), ModItems.suspendedlithiumItem);
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.lithiumCellItem), ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem, ModItems.lithiumnuggetItem);
+        GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.constructionBlocks, 1, 0), new ItemStack(ModBlocks.constructionBlocks, 1, (15)));
+        GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.fancyBrickBlock, 1, 0), new ItemStack(ModBlocks.fancyBrickBlock, 1, (15)));
 
 
 
