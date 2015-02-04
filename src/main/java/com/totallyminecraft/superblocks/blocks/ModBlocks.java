@@ -21,6 +21,8 @@ public final class ModBlocks {
     public static Block brickFurnaceActive;
     public static Block machinecoreBlock;
     public static Block batterychargerBlock;
+    public static Block industriallightBlock;
+    public static Block miningarrowBlock;
 
     public static Block fancyAcaciaBlock;
     public static Block fancyBirchBlock;
@@ -46,6 +48,8 @@ public final class ModBlocks {
         brickFurnaceActive = new BrickFurnaceBlock(true);
         machinecoreBlock = new MachineCoreBlock();
         batterychargerBlock = new BatteryChargerBlock();
+        industriallightBlock = new IndustrialLightBlock();
+        miningarrowBlock = new MiningArrowBlock();
 
         fancyAcaciaBlock = new FancyWoodBlock(1);
         fancyBirchBlock = new FancyWoodBlock(2);
