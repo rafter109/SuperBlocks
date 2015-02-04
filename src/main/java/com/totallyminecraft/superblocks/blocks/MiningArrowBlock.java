@@ -70,8 +70,6 @@ public class MiningArrowBlock extends BlockContainer{
                 TileEntityMiningArrow.Direction = 0;
         }
 
-        System.out.println(TileEntityMiningArrow.Direction);
-
 
     }
 
