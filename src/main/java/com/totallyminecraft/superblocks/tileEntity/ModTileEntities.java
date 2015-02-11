@@ -7,5 +7,6 @@ public class ModTileEntities {
 
     public static void init(){
         GameRegistry.registerTileEntity(BrickFurnaceEntity.class,"BrickFurnace");
+        GameRegistry.registerTileEntity(TileEntityMiningArrow.class,"MiningArrow");
     }
 }

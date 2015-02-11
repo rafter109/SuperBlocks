@@ -2,24 +2,22 @@ package com.totallyminecraft.superblocks.blocks;
 
 import com.totallyminecraft.superblocks.ModTabs;
 import com.totallyminecraft.superblocks.lib.Constants;
-import com.totallyminecraft.superblocks.tileEntity.TileEntityMachineCore;
+import com.totallyminecraft.superblocks.tileEntity.TileEntityFlatStairs;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 
-public class MachineCoreBlock extends BlockContainer{
+public class FlatStairsBlock extends BlockContainer{
 
-    private String name = "machinecoreBlock";
+    private String name = "flatstairsBlock";
 
 
-    public MachineCoreBlock() {
+    public FlatStairsBlock() {
         super(Material.iron);
-        this.setCreativeTab(ModTabs.tabSuperBlocksMachine);
+        this.setCreativeTab(ModTabs.tabSuperBlocks);
         this.setBlockName(Constants.MODID + "_" + name);
         GameRegistry.registerBlock(this, name);
         setBlockTextureName(Constants.MODID + ":" + name);
@@ -42,7 +40,7 @@ public class MachineCoreBlock extends BlockContainer{
 
     @Override
     public TileEntity createNewTileEntity(World var1, int var2){
-        return new TileEntityMachineCore();
+        return new TileEntityFlatStairs();
     }
 
 }

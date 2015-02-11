@@ -4,6 +4,7 @@ package com.totallyminecraft.superblocks.proxy;
 
 import com.totallyminecraft.superblocks.renderer.*;
 import com.totallyminecraft.superblocks.tileEntity.TileEntityBatteryChargerBlock;
+import com.totallyminecraft.superblocks.tileEntity.TileEntityFlatStairs;
 import com.totallyminecraft.superblocks.tileEntity.TileEntityMachineCore;
 import com.totallyminecraft.superblocks.tileEntity.TileEntityMiningArrow;
 import cpw.mods.fml.client.registry.ClientRegistry;
@@ -23,6 +24,9 @@ public class ClientProxy extends CommonProxy{
 
         TileEntitySpecialRenderer renderMiningArrow = new RenderMiningArrow();
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMiningArrow.class, renderMiningArrow);
+
+        TileEntitySpecialRenderer renderFlatStairs = new RenderFlatStairs();
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFlatStairs.class, renderFlatStairs);
     }
 
     public void registerTileEntitySpecialRenderer(){

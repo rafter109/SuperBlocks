@@ -15,12 +15,14 @@ public class TileEntityMiningArrow extends TileEntity{
     public void readFromNBT(NBTTagCompound nbt){
         super.readFromNBT(nbt);
         this.Direction = nbt.getInteger("Direction");
+        System.out.println(Direction + " Read");
     }
 
     @Override
     public void writeToNBT(NBTTagCompound nbt){
         super.writeToNBT(nbt);
         nbt.setInteger("Direction", Direction);
+        System.out.println(Direction + " Written");
     }
 
 }
